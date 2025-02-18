@@ -12,6 +12,7 @@ A recent research note from PWC highlights the gravity of this issue:
 
 > *“Financial institutions will lose 24% of revenue in the next 3-5 years, mainly due to customer churn to new fintech companies.”*  
 
+
 Given these challenges, reducing customer churn has become a critical business strategy for most organizations. Even when it’s not explicitly a strategic objective, retaining existing customers is always in the company’s best interest.  
 
 ## **1. Problem Formulation**  
