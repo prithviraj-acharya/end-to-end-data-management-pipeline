@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DataSourceManagerImpl" format="xml" multifile-model="true">
+    <data-source source="LOCAL" name="online_store" uuid="e38c91f8-e9f7-4de8-9908-be9fb7f3d72a">
+      <driver-ref>sqlite.xerial</driver-ref>
+      <synchronize>true</synchronize>
+      <jdbc-driver>org.sqlite.JDBC</jdbc-driver>
+      <jdbc-url>jdbc:sqlite:G:\My Drive\DataScienceMtech\Sem2\DataManagementForMachineLearning\Assignment\end-to-end-data-management-pipeline\customer_churn_feast\feature_repo\data\online_store.db</jdbc-url>
+      <working-dir>$ProjectFileDir$</working-dir>
+    </data-source>
+  </component>
+</project>

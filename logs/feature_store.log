@@ -1,0 +1,50 @@
+2025-03-07 13:35:11,481 - INFO - Ensuring directory exists: G:\My Drive\DataScienceMtech\Sem2\DataManagementForMachineLearning\Assignment\end-to-end-data-management-pipeline\data/raw/source_data
+2025-03-07 13:35:11,485 - INFO - Loading customer churn dataset from G:\My Drive\DataScienceMtech\Sem2\DataManagementForMachineLearning\Assignment\end-to-end-data-management-pipeline\data/raw/source_data\customer_churn_dataset_kaggle.csv
+2025-03-07 13:35:11,519 - INFO - Successfully loaded dataset from G:\My Drive\DataScienceMtech\Sem2\DataManagementForMachineLearning\Assignment\end-to-end-data-management-pipeline\data/raw/source_data\customer_churn_dataset_kaggle.csv.
+2025-03-07 13:35:11,598 - INFO - Converted dataset to Parquet and saved to G:\My Drive\DataScienceMtech\Sem2\DataManagementForMachineLearning\Assignment\end-to-end-data-management-pipeline\data/raw/source_data\customer_churn_dataset_kaggle.parquet
+2025-03-07 13:35:11,598 - INFO - Defining Feast entities and feature views.
+2025-03-07 13:35:11,603 - INFO - Feast feature definitions created successfully.
+2025-03-07 13:35:11,603 - INFO - Initializing FeatureStore at 'G:\My Drive\DataScienceMtech\Sem2\DataManagementForMachineLearning\Assignment\end-to-end-data-management-pipeline\customer_churn_feast/feature_repo'
+2025-03-07 13:35:12,290 - INFO - FeatureStore initialized successfully.
+2025-03-07 13:35:12,290 - INFO - Applying feature definitions to the store.
+2025-03-07 13:35:12,291 - INFO - Registry cache expired, so refreshing
+2025-03-07 13:35:12,326 - INFO - Feature definitions applied successfully.
+2025-03-07 13:35:12,326 - INFO - Starting feature materialization until 2025-03-07 13:35:12.326644
+2025-03-07 13:35:12,327 - INFO - Registry cache expired, so refreshing
+2025-03-07 13:35:12,332 - INFO - Registry cache expired, so refreshing
+2025-03-07 13:35:12,335 - INFO - Registry cache expired, so refreshing
+2025-03-07 13:35:12,754 - ERROR - An error occurred during the Feast apply process: could not convert string to float: ' '
+2025-03-07 13:39:08,146 - INFO - Ensuring directory exists: G:\My Drive\DataScienceMtech\Sem2\DataManagementForMachineLearning\Assignment\end-to-end-data-management-pipeline\data/raw/source_data
+2025-03-07 13:39:08,150 - INFO - Loading customer churn dataset from G:\My Drive\DataScienceMtech\Sem2\DataManagementForMachineLearning\Assignment\end-to-end-data-management-pipeline\data/raw/source_data\customer_churn_dataset_kaggle.csv
+2025-03-07 13:39:08,186 - INFO - Successfully loaded dataset from G:\My Drive\DataScienceMtech\Sem2\DataManagementForMachineLearning\Assignment\end-to-end-data-management-pipeline\data/raw/source_data\customer_churn_dataset_kaggle.csv.
+2025-03-07 13:39:08,251 - INFO - Converted dataset to Parquet and saved to G:\My Drive\DataScienceMtech\Sem2\DataManagementForMachineLearning\Assignment\end-to-end-data-management-pipeline\data/raw/source_data\customer_churn_dataset_kaggle.parquet
+2025-03-07 13:39:08,252 - INFO - Defining Feast entities and feature views.
+2025-03-07 13:39:08,257 - INFO - Feast feature definitions created successfully.
+2025-03-07 13:39:08,257 - INFO - Initializing FeatureStore at 'G:\My Drive\DataScienceMtech\Sem2\DataManagementForMachineLearning\Assignment\end-to-end-data-management-pipeline\customer_churn_feast/feature_repo'
+2025-03-07 13:39:08,983 - INFO - FeatureStore initialized successfully.
+2025-03-07 13:39:08,983 - INFO - Applying feature definitions to the store.
+2025-03-07 13:39:08,984 - INFO - Registry cache expired, so refreshing
+2025-03-07 13:39:09,018 - INFO - Feature definitions applied successfully.
+2025-03-07 13:39:09,018 - INFO - Starting feature materialization until 2025-03-07 13:39:09.018101
+2025-03-07 13:39:09,019 - INFO - Registry cache expired, so refreshing
+2025-03-07 13:39:09,023 - INFO - Registry cache expired, so refreshing
+2025-03-07 13:39:09,027 - INFO - Registry cache expired, so refreshing
+2025-03-07 13:39:14,490 - INFO - Features materialized successfully.
+2025-03-07 13:39:14,490 - INFO - Feast apply process completed successfully.
+2025-03-07 14:02:36,253 - INFO - Ensuring directory exists: G:\My Drive\DataScienceMtech\Sem2\DataManagementForMachineLearning\Assignment\end-to-end-data-management-pipeline\data/raw/source_data
+2025-03-07 14:02:36,253 - INFO - Loading customer churn dataset from G:\My Drive\DataScienceMtech\Sem2\DataManagementForMachineLearning\Assignment\end-to-end-data-management-pipeline\data/raw/source_data\customer_churn_dataset_kaggle.csv
+2025-03-07 14:02:36,285 - INFO - Successfully loaded dataset from G:\My Drive\DataScienceMtech\Sem2\DataManagementForMachineLearning\Assignment\end-to-end-data-management-pipeline\data/raw/source_data\customer_churn_dataset_kaggle.csv.
+2025-03-07 14:02:36,375 - INFO - Converted dataset to Parquet and saved to G:\My Drive\DataScienceMtech\Sem2\DataManagementForMachineLearning\Assignment\end-to-end-data-management-pipeline\data/raw/source_data\customer_churn_dataset_kaggle.parquet
+2025-03-07 14:02:36,375 - INFO - Defining Feast entities and feature views.
+2025-03-07 14:02:36,380 - INFO - Feast feature definitions created successfully.
+2025-03-07 14:02:36,380 - INFO - Initializing FeatureStore at 'G:\My Drive\DataScienceMtech\Sem2\DataManagementForMachineLearning\Assignment\end-to-end-data-management-pipeline\customer_churn_feast/feature_repo'
+2025-03-07 14:02:37,111 - INFO - FeatureStore initialized successfully.
+2025-03-07 14:02:37,111 - INFO - Applying feature definitions to the store.
+2025-03-07 14:02:37,111 - INFO - Registry cache expired, so refreshing
+2025-03-07 14:02:37,137 - INFO - Feature definitions applied successfully.
+2025-03-07 14:02:37,137 - INFO - Starting feature materialization until 2025-03-07 14:02:37.137170
+2025-03-07 14:02:37,137 - INFO - Registry cache expired, so refreshing
+2025-03-07 14:02:37,152 - INFO - Registry cache expired, so refreshing
+2025-03-07 14:02:37,152 - INFO - Registry cache expired, so refreshing
+2025-03-07 14:02:38,570 - INFO - Features materialized successfully.
+2025-03-07 14:02:38,570 - INFO - Feast apply process completed successfully.
