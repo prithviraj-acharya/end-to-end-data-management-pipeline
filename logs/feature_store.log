@@ -1,50 +1,76 @@
-2025-03-07 13:35:11,481 - INFO - Ensuring directory exists: G:\My Drive\DataScienceMtech\Sem2\DataManagementForMachineLearning\Assignment\end-to-end-data-management-pipeline\data/raw/source_data
-2025-03-07 13:35:11,485 - INFO - Loading customer churn dataset from G:\My Drive\DataScienceMtech\Sem2\DataManagementForMachineLearning\Assignment\end-to-end-data-management-pipeline\data/raw/source_data\customer_churn_dataset_kaggle.csv
-2025-03-07 13:35:11,519 - INFO - Successfully loaded dataset from G:\My Drive\DataScienceMtech\Sem2\DataManagementForMachineLearning\Assignment\end-to-end-data-management-pipeline\data/raw/source_data\customer_churn_dataset_kaggle.csv.
-2025-03-07 13:35:11,598 - INFO - Converted dataset to Parquet and saved to G:\My Drive\DataScienceMtech\Sem2\DataManagementForMachineLearning\Assignment\end-to-end-data-management-pipeline\data/raw/source_data\customer_churn_dataset_kaggle.parquet
-2025-03-07 13:35:11,598 - INFO - Defining Feast entities and feature views.
-2025-03-07 13:35:11,603 - INFO - Feast feature definitions created successfully.
-2025-03-07 13:35:11,603 - INFO - Initializing FeatureStore at 'G:\My Drive\DataScienceMtech\Sem2\DataManagementForMachineLearning\Assignment\end-to-end-data-management-pipeline\customer_churn_feast/feature_repo'
-2025-03-07 13:35:12,290 - INFO - FeatureStore initialized successfully.
-2025-03-07 13:35:12,290 - INFO - Applying feature definitions to the store.
-2025-03-07 13:35:12,291 - INFO - Registry cache expired, so refreshing
-2025-03-07 13:35:12,326 - INFO - Feature definitions applied successfully.
-2025-03-07 13:35:12,326 - INFO - Starting feature materialization until 2025-03-07 13:35:12.326644
-2025-03-07 13:35:12,327 - INFO - Registry cache expired, so refreshing
-2025-03-07 13:35:12,332 - INFO - Registry cache expired, so refreshing
-2025-03-07 13:35:12,335 - INFO - Registry cache expired, so refreshing
-2025-03-07 13:35:12,754 - ERROR - An error occurred during the Feast apply process: could not convert string to float: ' '
-2025-03-07 13:39:08,146 - INFO - Ensuring directory exists: G:\My Drive\DataScienceMtech\Sem2\DataManagementForMachineLearning\Assignment\end-to-end-data-management-pipeline\data/raw/source_data
-2025-03-07 13:39:08,150 - INFO - Loading customer churn dataset from G:\My Drive\DataScienceMtech\Sem2\DataManagementForMachineLearning\Assignment\end-to-end-data-management-pipeline\data/raw/source_data\customer_churn_dataset_kaggle.csv
-2025-03-07 13:39:08,186 - INFO - Successfully loaded dataset from G:\My Drive\DataScienceMtech\Sem2\DataManagementForMachineLearning\Assignment\end-to-end-data-management-pipeline\data/raw/source_data\customer_churn_dataset_kaggle.csv.
-2025-03-07 13:39:08,251 - INFO - Converted dataset to Parquet and saved to G:\My Drive\DataScienceMtech\Sem2\DataManagementForMachineLearning\Assignment\end-to-end-data-management-pipeline\data/raw/source_data\customer_churn_dataset_kaggle.parquet
-2025-03-07 13:39:08,252 - INFO - Defining Feast entities and feature views.
-2025-03-07 13:39:08,257 - INFO - Feast feature definitions created successfully.
-2025-03-07 13:39:08,257 - INFO - Initializing FeatureStore at 'G:\My Drive\DataScienceMtech\Sem2\DataManagementForMachineLearning\Assignment\end-to-end-data-management-pipeline\customer_churn_feast/feature_repo'
-2025-03-07 13:39:08,983 - INFO - FeatureStore initialized successfully.
-2025-03-07 13:39:08,983 - INFO - Applying feature definitions to the store.
-2025-03-07 13:39:08,984 - INFO - Registry cache expired, so refreshing
-2025-03-07 13:39:09,018 - INFO - Feature definitions applied successfully.
-2025-03-07 13:39:09,018 - INFO - Starting feature materialization until 2025-03-07 13:39:09.018101
-2025-03-07 13:39:09,019 - INFO - Registry cache expired, so refreshing
-2025-03-07 13:39:09,023 - INFO - Registry cache expired, so refreshing
-2025-03-07 13:39:09,027 - INFO - Registry cache expired, so refreshing
-2025-03-07 13:39:14,490 - INFO - Features materialized successfully.
-2025-03-07 13:39:14,490 - INFO - Feast apply process completed successfully.
-2025-03-07 14:02:36,253 - INFO - Ensuring directory exists: G:\My Drive\DataScienceMtech\Sem2\DataManagementForMachineLearning\Assignment\end-to-end-data-management-pipeline\data/raw/source_data
-2025-03-07 14:02:36,253 - INFO - Loading customer churn dataset from G:\My Drive\DataScienceMtech\Sem2\DataManagementForMachineLearning\Assignment\end-to-end-data-management-pipeline\data/raw/source_data\customer_churn_dataset_kaggle.csv
-2025-03-07 14:02:36,285 - INFO - Successfully loaded dataset from G:\My Drive\DataScienceMtech\Sem2\DataManagementForMachineLearning\Assignment\end-to-end-data-management-pipeline\data/raw/source_data\customer_churn_dataset_kaggle.csv.
-2025-03-07 14:02:36,375 - INFO - Converted dataset to Parquet and saved to G:\My Drive\DataScienceMtech\Sem2\DataManagementForMachineLearning\Assignment\end-to-end-data-management-pipeline\data/raw/source_data\customer_churn_dataset_kaggle.parquet
-2025-03-07 14:02:36,375 - INFO - Defining Feast entities and feature views.
-2025-03-07 14:02:36,380 - INFO - Feast feature definitions created successfully.
-2025-03-07 14:02:36,380 - INFO - Initializing FeatureStore at 'G:\My Drive\DataScienceMtech\Sem2\DataManagementForMachineLearning\Assignment\end-to-end-data-management-pipeline\customer_churn_feast/feature_repo'
-2025-03-07 14:02:37,111 - INFO - FeatureStore initialized successfully.
-2025-03-07 14:02:37,111 - INFO - Applying feature definitions to the store.
-2025-03-07 14:02:37,111 - INFO - Registry cache expired, so refreshing
-2025-03-07 14:02:37,137 - INFO - Feature definitions applied successfully.
-2025-03-07 14:02:37,137 - INFO - Starting feature materialization until 2025-03-07 14:02:37.137170
-2025-03-07 14:02:37,137 - INFO - Registry cache expired, so refreshing
-2025-03-07 14:02:37,152 - INFO - Registry cache expired, so refreshing
-2025-03-07 14:02:37,152 - INFO - Registry cache expired, so refreshing
-2025-03-07 14:02:38,570 - INFO - Features materialized successfully.
-2025-03-07 14:02:38,570 - INFO - Feast apply process completed successfully.
+2025-03-07 22:10:59,185 - INFO - Ensuring directory exists: G:\My Drive\DataScienceMtech\Sem2\DataManagementForMachineLearning\Assignment\end-to-end-data-management-pipeline\data/raw/source_data
+2025-03-07 22:10:59,189 - INFO - Loading customer churn dataset from G:\My Drive\DataScienceMtech\Sem2\DataManagementForMachineLearning\Assignment\end-to-end-data-management-pipeline\data/raw/source_data\customer_churn_dataset_kaggle.csv
+2025-03-07 22:10:59,225 - INFO - Successfully loaded dataset from G:\My Drive\DataScienceMtech\Sem2\DataManagementForMachineLearning\Assignment\end-to-end-data-management-pipeline\data/raw/source_data\customer_churn_dataset_kaggle.csv.
+2025-03-07 22:10:59,242 - INFO - Event timestamps range from 2025-02-06 16:40:59.226363+00:00 to 2025-03-07 16:40:59.226363+00:00
+2025-03-07 22:10:59,311 - INFO - Converted dataset to Parquet and saved to G:\My Drive\DataScienceMtech\Sem2\DataManagementForMachineLearning\Assignment\end-to-end-data-management-pipeline\data/raw/source_data\customer_churn_dataset_kaggle.parquet
+2025-03-07 22:10:59,312 - INFO - Defining Feast entities and feature views.
+2025-03-07 22:10:59,313 - INFO - Feast feature definitions created successfully.
+2025-03-07 22:10:59,313 - INFO - Initializing FeatureStore at 'G:\My Drive\DataScienceMtech\Sem2\DataManagementForMachineLearning\Assignment\end-to-end-data-management-pipeline\customer_churn_feast/feature_repo'
+2025-03-07 22:11:00,051 - INFO - FeatureStore initialized successfully.
+2025-03-07 22:11:00,052 - INFO - Fetching offline features from 2024-03-01 00:00:00+00:00 to 2025-03-07 16:41:00.052647+00:00
+2025-03-07 22:11:00,087 - INFO - Entity DF sample:
+   customerID                  event_timestamp
+0  7590-VHVEG 2025-03-07 16:41:00.052647+00:00
+1  5575-GNVDE 2025-03-07 16:41:00.052647+00:00
+2  3668-QPYBK 2025-03-07 16:41:00.052647+00:00
+3  7795-CFOCW 2025-03-07 16:41:00.052647+00:00
+4  9237-HQITU 2025-03-07 16:41:00.052647+00:00
+2025-03-07 22:11:00,088 - INFO - Registry cache expired, so refreshing
+2025-03-07 22:11:00,093 - INFO - Registry cache expired, so refreshing
+2025-03-07 22:11:00,097 - INFO - Registry cache expired, so refreshing
+2025-03-07 22:11:00,108 - INFO - Registry cache expired, so refreshing
+2025-03-07 22:11:00,508 - INFO - Retrieved 7043 rows before filtering.
+2025-03-07 22:11:00,508 - INFO - Filtered to 7043 rows within 2024-03-01 00:00:00+00:00 to 2025-03-07 16:41:00.052647+00:00.
+2025-03-07 22:11:00,511 - INFO - First 5 rows of offline features:
+customerID                  event_timestamp  tenure  TotalCharges Churn
+2946-KIQSP 2025-03-07 16:41:00.052647+00:00      35       1175.85    No
+9593-CVZKR 2025-03-07 16:41:00.052647+00:00      56       1385.85    No
+2805-AUFQN 2025-03-07 16:41:00.052647+00:00      25        475.20    No
+5076-YVXCM 2025-03-07 16:41:00.052647+00:00      51       4149.45    No
+6893-ODYYE 2025-03-07 16:41:00.052647+00:00      50       4549.45    No
+2025-03-07 22:11:00,511 - INFO - Fetching online features for customers: ['7590-VHVEG', '5575-GNVDE', '3668-QPYBK']
+2025-03-07 22:11:00,526 - INFO - Online feature retrieval successful. Retrieved 3 rows.
+2025-03-07 22:11:00,527 - INFO - Online features:
+customerID Churn  tenure  TotalCharges
+7590-VHVEG    No       1     29.850000
+5575-GNVDE    No      34   1889.500000
+3668-QPYBK   Yes       2    108.150002
+2025-03-07 22:11:00,528 - INFO - Feature retrieval completed successfully.
+2025-03-07 22:13:39,079 - INFO - Ensuring directory exists: G:\My Drive\DataScienceMtech\Sem2\DataManagementForMachineLearning\Assignment\end-to-end-data-management-pipeline\data/raw/source_data
+2025-03-07 22:13:39,079 - INFO - Loading customer churn dataset from G:\My Drive\DataScienceMtech\Sem2\DataManagementForMachineLearning\Assignment\end-to-end-data-management-pipeline\data/raw/source_data\customer_churn_dataset_kaggle.csv
+2025-03-07 22:13:39,118 - INFO - Successfully loaded dataset from G:\My Drive\DataScienceMtech\Sem2\DataManagementForMachineLearning\Assignment\end-to-end-data-management-pipeline\data/raw/source_data\customer_churn_dataset_kaggle.csv.
+2025-03-07 22:13:39,127 - INFO - Event timestamps range from 2025-02-06 16:43:39.118379+00:00 to 2025-03-07 16:43:39.118379+00:00
+2025-03-07 22:13:39,206 - INFO - Converted dataset to Parquet and saved to G:\My Drive\DataScienceMtech\Sem2\DataManagementForMachineLearning\Assignment\end-to-end-data-management-pipeline\data/raw/source_data\customer_churn_dataset_kaggle.parquet
+2025-03-07 22:13:39,207 - INFO - Defining Feast entities and feature views.
+2025-03-07 22:13:39,208 - INFO - Feast feature definitions created successfully.
+2025-03-07 22:13:39,208 - INFO - Initializing FeatureStore at 'G:\My Drive\DataScienceMtech\Sem2\DataManagementForMachineLearning\Assignment\end-to-end-data-management-pipeline\customer_churn_feast/feature_repo'
+2025-03-07 22:13:39,958 - INFO - FeatureStore initialized successfully.
+2025-03-07 22:13:39,958 - INFO - Fetching offline features from 2024-03-01 00:00:00+00:00 to 2025-03-07 16:43:39.958318+00:00
+2025-03-07 22:13:40,001 - INFO - Entity DF sample:
+   customerID                  event_timestamp
+0  7590-VHVEG 2025-03-07 16:43:39.958318+00:00
+1  5575-GNVDE 2025-03-07 16:43:39.958318+00:00
+2  3668-QPYBK 2025-03-07 16:43:39.958318+00:00
+3  7795-CFOCW 2025-03-07 16:43:39.958318+00:00
+4  9237-HQITU 2025-03-07 16:43:39.958318+00:00
+2025-03-07 22:13:40,001 - INFO - Registry cache expired, so refreshing
+2025-03-07 22:13:40,005 - INFO - Registry cache expired, so refreshing
+2025-03-07 22:13:40,005 - INFO - Registry cache expired, so refreshing
+2025-03-07 22:13:40,021 - INFO - Registry cache expired, so refreshing
+2025-03-07 22:13:40,470 - INFO - Retrieved 7043 rows before filtering.
+2025-03-07 22:13:40,470 - INFO - Filtered to 7043 rows within 2024-03-01 00:00:00+00:00 to 2025-03-07 16:43:39.958318+00:00.
+2025-03-07 22:13:40,470 - INFO - First 5 rows of offline features:
+customerID                  event_timestamp  tenure  TotalCharges Churn
+2946-KIQSP 2025-03-07 16:43:39.958318+00:00      35       1175.85    No
+9593-CVZKR 2025-03-07 16:43:39.958318+00:00      56       1385.85    No
+2805-AUFQN 2025-03-07 16:43:39.958318+00:00      25        475.20    No
+5076-YVXCM 2025-03-07 16:43:39.958318+00:00      51       4149.45    No
+6893-ODYYE 2025-03-07 16:43:39.958318+00:00      50       4549.45    No
+2025-03-07 22:13:40,470 - INFO - Fetching online features for customers: ['7590-VHVEG', '5575-GNVDE', '3668-QPYBK']
+2025-03-07 22:13:40,485 - INFO - Online feature retrieval successful. Retrieved 3 rows.
+2025-03-07 22:13:40,485 - INFO - Online features:
+customerID  tenure Churn  TotalCharges
+7590-VHVEG       1    No     29.850000
+5575-GNVDE      34    No   1889.500000
+3668-QPYBK       2   Yes    108.150002
+2025-03-07 22:13:40,485 - INFO - Feature retrieval completed successfully.

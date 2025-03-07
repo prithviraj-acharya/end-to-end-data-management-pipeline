@@ -24,9 +24,12 @@ try:
     fs.apply([customer, customer_features])
     logger.info("Feature definitions applied successfully.")
 
-    # Materialize incremental features
-    end_time = datetime.now()
-    logger.info(f"Starting feature materialization until {end_time}")
+    # Materialize incremental features dynamically
+    end_time = datetime.now(tz=pytz.UTC)
+    parquet_path = os.path.join(project_root, "data/raw/source_data", "customer_churn_dataset_kaggle.parquet")
+    df = pd.read_parquet(parquet_path)
+    earliest_timestamp = df["event_timestamp"].min()
+    logger.info(f"Starting feature materialization from {earliest_timestamp} to {end_time}")
     fs.materialize_incremental(end_date=end_time)
     logger.info("Features materialized successfully.")
 
