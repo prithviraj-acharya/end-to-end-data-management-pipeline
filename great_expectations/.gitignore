@@ -1,1 +1,3 @@
-uncommitted/
+config/credentials.yaml
+venv
+.env
