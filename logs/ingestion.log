@@ -7,3 +7,17 @@
 2025-02-21 00:56:29,856 - INFO - Local file 'D:\DataScienceMtech\Sem2\DataManagementForMachineLearning\Assignment\end-to-end-data-management-pipeline\data/raw/local/customer_churn_dataset_local.csv' ingested successfully (10000 rows, 12 columns).
 2025-02-21 00:58:25,011 - INFO - Successfully uploaded customer_churn_dataset_kaggle.csv to s3://dmml-assignment-bucket/raw/customer_churn_dataset_kaggle.csv
 2025-02-21 00:58:25,700 - INFO - Successfully uploaded customer_data.csv to s3://dmml-assignment-bucket/raw/customer_data.csv
+2025-03-09 17:15:41,246 - INFO - Kaggle API authenticated successfully.
+2025-03-09 17:15:42,181 - INFO - Downloading Kaggle dataset 'blastchar/telco-customer-churn'...
+2025-03-09 17:15:42,188 - INFO - Deleted old CSV file: G:\My Drive\DataScienceMtech\Sem2\DataManagementForMachineLearning\Assignment\end-to-end-data-management-pipeline\data/raw/source_data\customer_churn_dataset_kaggle.csv
+2025-03-09 17:15:42,192 - INFO - Deleted old CSV file: G:\My Drive\DataScienceMtech\Sem2\DataManagementForMachineLearning\Assignment\end-to-end-data-management-pipeline\data/raw/source_data\customer_data.csv
+2025-03-09 17:15:45,280 - INFO - Dataset 'blastchar/telco-customer-churn' downloaded successfully to 'G:\My Drive\DataScienceMtech\Sem2\DataManagementForMachineLearning\Assignment\end-to-end-data-management-pipeline\data/raw/source_data'.
+2025-03-09 17:15:45,286 - INFO - File renamed from 'G:\My Drive\DataScienceMtech\Sem2\DataManagementForMachineLearning\Assignment\end-to-end-data-management-pipeline\data/raw/source_data\WA_Fn-UseC_-Telco-Customer-Churn.csv' to 'G:\My Drive\DataScienceMtech\Sem2\DataManagementForMachineLearning\Assignment\end-to-end-data-management-pipeline\data/raw/source_data\customer_churn_dataset_kaggle.csv'.
+2025-03-09 17:15:46,439 - INFO - Local file 'G:\My Drive\DataScienceMtech\Sem2\DataManagementForMachineLearning\Assignment\end-to-end-data-management-pipeline\data/raw/local/customer_churn_dataset_local.csv' ingested successfully (10000 rows, 12 columns).
+2025-03-09 17:16:42,101 - INFO - Kaggle API authenticated successfully.
+2025-03-09 17:16:42,103 - INFO - Downloading Kaggle dataset 'blastchar/telco-customer-churn'...
+2025-03-09 17:16:42,107 - INFO - Deleted old CSV file: G:\My Drive\DataScienceMtech\Sem2\DataManagementForMachineLearning\Assignment\end-to-end-data-management-pipeline\data/raw/source_data\customer_churn_dataset_kaggle.csv
+2025-03-09 17:16:42,111 - INFO - Deleted old CSV file: G:\My Drive\DataScienceMtech\Sem2\DataManagementForMachineLearning\Assignment\end-to-end-data-management-pipeline\data/raw/source_data\customer_data.csv
+2025-03-09 17:16:45,258 - INFO - Dataset 'blastchar/telco-customer-churn' downloaded successfully to 'G:\My Drive\DataScienceMtech\Sem2\DataManagementForMachineLearning\Assignment\end-to-end-data-management-pipeline\data/raw/source_data'.
+2025-03-09 17:16:45,267 - INFO - File renamed from 'G:\My Drive\DataScienceMtech\Sem2\DataManagementForMachineLearning\Assignment\end-to-end-data-management-pipeline\data/raw/source_data\WA_Fn-UseC_-Telco-Customer-Churn.csv' to 'G:\My Drive\DataScienceMtech\Sem2\DataManagementForMachineLearning\Assignment\end-to-end-data-management-pipeline\data/raw/source_data\customer_churn_dataset_kaggle.csv'.
+2025-03-09 17:16:45,351 - INFO - Local file 'G:\My Drive\DataScienceMtech\Sem2\DataManagementForMachineLearning\Assignment\end-to-end-data-management-pipeline\data/raw/local/customer_churn_dataset_local.csv' ingested successfully (10000 rows, 12 columns).

@@ -1,5 +1,4 @@
 import os
-import pandas as pd
 from datetime import datetime
 import pytz
 from feast import FeatureStore
@@ -26,10 +25,8 @@ try:
 
     # Materialize incremental features dynamically
     end_time = datetime.now(tz=pytz.UTC)
-    parquet_path = os.path.join(project_root, "data/raw/source_data", "customer_churn_dataset_kaggle.parquet")
-    df = pd.read_parquet(parquet_path)
-    earliest_timestamp = df["event_timestamp"].min()
-    logger.info(f"Starting feature materialization from {earliest_timestamp} to {end_time}")
+    #start_time = datetime(2024, 3, 1, tzinfo=pytz.UTC)  # Hardcoded start date
+    #logger.info(f"Starting feature materialization from {start_time} to {end_time}")
     fs.materialize_incremental(end_date=end_time)
     logger.info("Features materialized successfully.")
 

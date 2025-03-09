@@ -1,156 +1,688 @@
-2025-03-07 22:10:59,185 - INFO - Ensuring directory exists: G:\My Drive\DataScienceMtech\Sem2\DataManagementForMachineLearning\Assignment\end-to-end-data-management-pipeline\data/raw/source_data
-2025-03-07 22:10:59,189 - INFO - Loading customer churn dataset from G:\My Drive\DataScienceMtech\Sem2\DataManagementForMachineLearning\Assignment\end-to-end-data-management-pipeline\data/raw/source_data\customer_churn_dataset_kaggle.csv
-2025-03-07 22:10:59,225 - INFO - Successfully loaded dataset from G:\My Drive\DataScienceMtech\Sem2\DataManagementForMachineLearning\Assignment\end-to-end-data-management-pipeline\data/raw/source_data\customer_churn_dataset_kaggle.csv.
-2025-03-07 22:10:59,242 - INFO - Event timestamps range from 2025-02-06 16:40:59.226363+00:00 to 2025-03-07 16:40:59.226363+00:00
-2025-03-07 22:10:59,311 - INFO - Converted dataset to Parquet and saved to G:\My Drive\DataScienceMtech\Sem2\DataManagementForMachineLearning\Assignment\end-to-end-data-management-pipeline\data/raw/source_data\customer_churn_dataset_kaggle.parquet
-2025-03-07 22:10:59,312 - INFO - Defining Feast entities and feature views.
-2025-03-07 22:10:59,313 - INFO - Feast feature definitions created successfully.
-2025-03-07 22:10:59,313 - INFO - Initializing FeatureStore at 'G:\My Drive\DataScienceMtech\Sem2\DataManagementForMachineLearning\Assignment\end-to-end-data-management-pipeline\customer_churn_feast/feature_repo'
-2025-03-07 22:11:00,051 - INFO - FeatureStore initialized successfully.
-2025-03-07 22:11:00,052 - INFO - Fetching offline features from 2024-03-01 00:00:00+00:00 to 2025-03-07 16:41:00.052647+00:00
-2025-03-07 22:11:00,087 - INFO - Entity DF sample:
-   customerID                  event_timestamp
-0  7590-VHVEG 2025-03-07 16:41:00.052647+00:00
-1  5575-GNVDE 2025-03-07 16:41:00.052647+00:00
-2  3668-QPYBK 2025-03-07 16:41:00.052647+00:00
-3  7795-CFOCW 2025-03-07 16:41:00.052647+00:00
-4  9237-HQITU 2025-03-07 16:41:00.052647+00:00
-2025-03-07 22:11:00,088 - INFO - Registry cache expired, so refreshing
-2025-03-07 22:11:00,093 - INFO - Registry cache expired, so refreshing
-2025-03-07 22:11:00,097 - INFO - Registry cache expired, so refreshing
-2025-03-07 22:11:00,108 - INFO - Registry cache expired, so refreshing
-2025-03-07 22:11:00,508 - INFO - Retrieved 7043 rows before filtering.
-2025-03-07 22:11:00,508 - INFO - Filtered to 7043 rows within 2024-03-01 00:00:00+00:00 to 2025-03-07 16:41:00.052647+00:00.
-2025-03-07 22:11:00,511 - INFO - First 5 rows of offline features:
-customerID                  event_timestamp  tenure  TotalCharges Churn
-2946-KIQSP 2025-03-07 16:41:00.052647+00:00      35       1175.85    No
-9593-CVZKR 2025-03-07 16:41:00.052647+00:00      56       1385.85    No
-2805-AUFQN 2025-03-07 16:41:00.052647+00:00      25        475.20    No
-5076-YVXCM 2025-03-07 16:41:00.052647+00:00      51       4149.45    No
-6893-ODYYE 2025-03-07 16:41:00.052647+00:00      50       4549.45    No
-2025-03-07 22:11:00,511 - INFO - Fetching online features for customers: ['7590-VHVEG', '5575-GNVDE', '3668-QPYBK']
-2025-03-07 22:11:00,526 - INFO - Online feature retrieval successful. Retrieved 3 rows.
-2025-03-07 22:11:00,527 - INFO - Online features:
-customerID Churn  tenure  TotalCharges
-7590-VHVEG    No       1     29.850000
-5575-GNVDE    No      34   1889.500000
-3668-QPYBK   Yes       2    108.150002
-2025-03-07 22:11:00,528 - INFO - Feature retrieval completed successfully.
-2025-03-07 22:13:39,079 - INFO - Ensuring directory exists: G:\My Drive\DataScienceMtech\Sem2\DataManagementForMachineLearning\Assignment\end-to-end-data-management-pipeline\data/raw/source_data
-2025-03-07 22:13:39,079 - INFO - Loading customer churn dataset from G:\My Drive\DataScienceMtech\Sem2\DataManagementForMachineLearning\Assignment\end-to-end-data-management-pipeline\data/raw/source_data\customer_churn_dataset_kaggle.csv
-2025-03-07 22:13:39,118 - INFO - Successfully loaded dataset from G:\My Drive\DataScienceMtech\Sem2\DataManagementForMachineLearning\Assignment\end-to-end-data-management-pipeline\data/raw/source_data\customer_churn_dataset_kaggle.csv.
-2025-03-07 22:13:39,127 - INFO - Event timestamps range from 2025-02-06 16:43:39.118379+00:00 to 2025-03-07 16:43:39.118379+00:00
-2025-03-07 22:13:39,206 - INFO - Converted dataset to Parquet and saved to G:\My Drive\DataScienceMtech\Sem2\DataManagementForMachineLearning\Assignment\end-to-end-data-management-pipeline\data/raw/source_data\customer_churn_dataset_kaggle.parquet
-2025-03-07 22:13:39,207 - INFO - Defining Feast entities and feature views.
-2025-03-07 22:13:39,208 - INFO - Feast feature definitions created successfully.
-2025-03-07 22:13:39,208 - INFO - Initializing FeatureStore at 'G:\My Drive\DataScienceMtech\Sem2\DataManagementForMachineLearning\Assignment\end-to-end-data-management-pipeline\customer_churn_feast/feature_repo'
-2025-03-07 22:13:39,958 - INFO - FeatureStore initialized successfully.
-2025-03-07 22:13:39,958 - INFO - Fetching offline features from 2024-03-01 00:00:00+00:00 to 2025-03-07 16:43:39.958318+00:00
-2025-03-07 22:13:40,001 - INFO - Entity DF sample:
-   customerID                  event_timestamp
-0  7590-VHVEG 2025-03-07 16:43:39.958318+00:00
-1  5575-GNVDE 2025-03-07 16:43:39.958318+00:00
-2  3668-QPYBK 2025-03-07 16:43:39.958318+00:00
-3  7795-CFOCW 2025-03-07 16:43:39.958318+00:00
-4  9237-HQITU 2025-03-07 16:43:39.958318+00:00
-2025-03-07 22:13:40,001 - INFO - Registry cache expired, so refreshing
-2025-03-07 22:13:40,005 - INFO - Registry cache expired, so refreshing
-2025-03-07 22:13:40,005 - INFO - Registry cache expired, so refreshing
-2025-03-07 22:13:40,021 - INFO - Registry cache expired, so refreshing
-2025-03-07 22:13:40,470 - INFO - Retrieved 7043 rows before filtering.
-2025-03-07 22:13:40,470 - INFO - Filtered to 7043 rows within 2024-03-01 00:00:00+00:00 to 2025-03-07 16:43:39.958318+00:00.
-2025-03-07 22:13:40,470 - INFO - First 5 rows of offline features:
-customerID                  event_timestamp  tenure  TotalCharges Churn
-2946-KIQSP 2025-03-07 16:43:39.958318+00:00      35       1175.85    No
-9593-CVZKR 2025-03-07 16:43:39.958318+00:00      56       1385.85    No
-2805-AUFQN 2025-03-07 16:43:39.958318+00:00      25        475.20    No
-5076-YVXCM 2025-03-07 16:43:39.958318+00:00      51       4149.45    No
-6893-ODYYE 2025-03-07 16:43:39.958318+00:00      50       4549.45    No
-2025-03-07 22:13:40,470 - INFO - Fetching online features for customers: ['7590-VHVEG', '5575-GNVDE', '3668-QPYBK']
-2025-03-07 22:13:40,485 - INFO - Online feature retrieval successful. Retrieved 3 rows.
-2025-03-07 22:13:40,485 - INFO - Online features:
-customerID  tenure Churn  TotalCharges
-7590-VHVEG       1    No     29.850000
-5575-GNVDE      34    No   1889.500000
-3668-QPYBK       2   Yes    108.150002
-2025-03-07 22:13:40,485 - INFO - Feature retrieval completed successfully.
-2025-03-08 09:44:04,645 - INFO - Ensuring directory exists: G:\My Drive\DataScienceMtech\Sem2\DataManagementForMachineLearning\Assignment\end-to-end-data-management-pipeline\data/raw/source_data
-2025-03-08 09:44:04,689 - INFO - Loading customer churn dataset from G:\My Drive\DataScienceMtech\Sem2\DataManagementForMachineLearning\Assignment\end-to-end-data-management-pipeline\data/raw/source_data\customer_churn_dataset_kaggle.csv
-2025-03-08 09:44:04,803 - INFO - Successfully loaded dataset from G:\My Drive\DataScienceMtech\Sem2\DataManagementForMachineLearning\Assignment\end-to-end-data-management-pipeline\data/raw/source_data\customer_churn_dataset_kaggle.csv.
-2025-03-08 09:44:04,861 - INFO - Event timestamps range from 2025-02-07 04:14:04.807392+00:00 to 2025-03-08 04:14:04.807392+00:00
-2025-03-08 09:44:05,186 - INFO - Converted dataset to Parquet and saved to G:\My Drive\DataScienceMtech\Sem2\DataManagementForMachineLearning\Assignment\end-to-end-data-management-pipeline\data/raw/source_data\customer_churn_dataset_kaggle.parquet
-2025-03-08 09:44:05,186 - INFO - Defining Feast entities and feature views.
-2025-03-08 09:44:05,188 - INFO - Feast feature definitions created successfully.
-2025-03-08 09:44:25,291 - INFO - Ensuring directory exists: G:\My Drive\DataScienceMtech\Sem2\DataManagementForMachineLearning\Assignment\end-to-end-data-management-pipeline\data/raw/source_data
-2025-03-08 09:44:25,299 - INFO - Loading customer churn dataset from G:\My Drive\DataScienceMtech\Sem2\DataManagementForMachineLearning\Assignment\end-to-end-data-management-pipeline\data/raw/source_data\customer_churn_dataset_kaggle.csv
-2025-03-08 09:44:25,406 - INFO - Successfully loaded dataset from G:\My Drive\DataScienceMtech\Sem2\DataManagementForMachineLearning\Assignment\end-to-end-data-management-pipeline\data/raw/source_data\customer_churn_dataset_kaggle.csv.
-2025-03-08 09:44:25,459 - INFO - Event timestamps range from 2025-02-07 04:14:25.410517+00:00 to 2025-03-08 04:14:25.410517+00:00
-2025-03-08 09:44:25,793 - INFO - Converted dataset to Parquet and saved to G:\My Drive\DataScienceMtech\Sem2\DataManagementForMachineLearning\Assignment\end-to-end-data-management-pipeline\data/raw/source_data\customer_churn_dataset_kaggle.parquet
-2025-03-08 09:44:25,795 - INFO - Defining Feast entities and feature views.
-2025-03-08 09:44:25,801 - INFO - Feast feature definitions created successfully.
-2025-03-08 09:44:25,803 - INFO - Initializing FeatureStore at 'G:\My Drive\DataScienceMtech\Sem2\DataManagementForMachineLearning\Assignment\end-to-end-data-management-pipeline\customer_churn_feast/feature_repo'
-2025-03-08 09:44:29,400 - INFO - Registry file not found. Creating new registry.
-2025-03-08 09:44:29,443 - INFO - FeatureStore initialized successfully.
-2025-03-08 09:44:29,445 - INFO - Applying feature definitions to the store.
-2025-03-08 09:44:29,447 - INFO - Registry cache expired, so refreshing
-2025-03-08 09:44:29,485 - INFO - Registry cache expired, so refreshing
-2025-03-08 09:44:29,574 - INFO - Found credentials in shared credentials file: ~/.aws/credentials
-2025-03-08 09:44:30,438 - ERROR - An error occurred during the Feast apply process: Unknown builtin variable name: AWS::Auth::AccountId
-2025-03-08 09:48:08,824 - INFO - Ensuring directory exists: G:\My Drive\DataScienceMtech\Sem2\DataManagementForMachineLearning\Assignment\end-to-end-data-management-pipeline\data/raw/source_data
-2025-03-08 09:48:08,857 - INFO - Loading customer churn dataset from G:\My Drive\DataScienceMtech\Sem2\DataManagementForMachineLearning\Assignment\end-to-end-data-management-pipeline\data/raw/source_data\customer_churn_dataset_kaggle.csv
-2025-03-08 09:48:08,956 - INFO - Successfully loaded dataset from G:\My Drive\DataScienceMtech\Sem2\DataManagementForMachineLearning\Assignment\end-to-end-data-management-pipeline\data/raw/source_data\customer_churn_dataset_kaggle.csv.
-2025-03-08 09:48:09,006 - INFO - Event timestamps range from 2025-02-07 04:18:08.960140+00:00 to 2025-03-08 04:18:08.960140+00:00
-2025-03-08 09:48:09,288 - INFO - Converted dataset to Parquet and saved to G:\My Drive\DataScienceMtech\Sem2\DataManagementForMachineLearning\Assignment\end-to-end-data-management-pipeline\data/raw/source_data\customer_churn_dataset_kaggle.parquet
-2025-03-08 09:48:09,289 - INFO - Defining Feast entities and feature views.
-2025-03-08 09:48:09,292 - INFO - Feast feature definitions created successfully.
-2025-03-08 09:48:09,294 - INFO - Initializing FeatureStore at 'G:\My Drive\DataScienceMtech\Sem2\DataManagementForMachineLearning\Assignment\end-to-end-data-management-pipeline\customer_churn_feast/feature_repo'
-2025-03-08 09:48:12,262 - INFO - FeatureStore initialized successfully.
-2025-03-08 09:48:12,263 - INFO - Applying feature definitions to the store.
-2025-03-08 09:48:12,265 - INFO - Registry cache expired, so refreshing
-2025-03-08 09:48:12,340 - INFO - Found credentials in shared credentials file: ~/.aws/credentials
-2025-03-08 09:48:37,222 - INFO - Feature definitions applied successfully.
-2025-03-08 09:48:37,377 - INFO - Starting feature materialization from 2025-02-07 04:18:08.960140+00:00 to 2025-03-08 04:18:37.224604+00:00
-2025-03-08 09:48:37,381 - INFO - Registry cache expired, so refreshing
-2025-03-08 09:48:37,402 - INFO - Registry cache expired, so refreshing
-2025-03-08 09:48:37,429 - INFO - Registry cache expired, so refreshing
-2025-03-08 09:49:37,055 - INFO - Features materialized successfully.
-2025-03-08 09:49:37,058 - INFO - Feast apply process completed successfully.
-2025-03-08 09:51:26,274 - INFO - Ensuring directory exists: G:\My Drive\DataScienceMtech\Sem2\DataManagementForMachineLearning\Assignment\end-to-end-data-management-pipeline\data/raw/source_data
-2025-03-08 09:51:26,299 - INFO - Loading customer churn dataset from G:\My Drive\DataScienceMtech\Sem2\DataManagementForMachineLearning\Assignment\end-to-end-data-management-pipeline\data/raw/source_data\customer_churn_dataset_kaggle.csv
-2025-03-08 09:51:26,400 - INFO - Successfully loaded dataset from G:\My Drive\DataScienceMtech\Sem2\DataManagementForMachineLearning\Assignment\end-to-end-data-management-pipeline\data/raw/source_data\customer_churn_dataset_kaggle.csv.
-2025-03-08 09:51:26,452 - INFO - Event timestamps range from 2025-02-07 04:21:26.402863+00:00 to 2025-03-08 04:21:26.402863+00:00
-2025-03-08 09:51:26,723 - INFO - Converted dataset to Parquet and saved to G:\My Drive\DataScienceMtech\Sem2\DataManagementForMachineLearning\Assignment\end-to-end-data-management-pipeline\data/raw/source_data\customer_churn_dataset_kaggle.parquet
-2025-03-08 09:51:26,727 - INFO - Defining Feast entities and feature views.
-2025-03-08 09:51:26,733 - INFO - Feast feature definitions created successfully.
-2025-03-08 09:51:26,738 - INFO - Initializing FeatureStore at 'G:\My Drive\DataScienceMtech\Sem2\DataManagementForMachineLearning\Assignment\end-to-end-data-management-pipeline\customer_churn_feast/feature_repo'
-2025-03-08 09:51:29,625 - INFO - FeatureStore initialized successfully.
-2025-03-08 09:51:29,627 - INFO - Fetching offline features from 2024-03-01 00:00:00+00:00 to 2025-03-08 04:21:29.627175+00:00
-2025-03-08 09:51:29,734 - INFO - Entity DF sample:
-   customerID                  event_timestamp
-0  7590-VHVEG 2025-03-08 04:21:29.627175+00:00
-1  5575-GNVDE 2025-03-08 04:21:29.627175+00:00
-2  3668-QPYBK 2025-03-08 04:21:29.627175+00:00
-3  7795-CFOCW 2025-03-08 04:21:29.627175+00:00
-4  9237-HQITU 2025-03-08 04:21:29.627175+00:00
-2025-03-08 09:51:29,742 - INFO - Registry cache expired, so refreshing
-2025-03-08 09:51:29,773 - INFO - Registry cache expired, so refreshing
-2025-03-08 09:51:29,787 - INFO - Registry cache expired, so refreshing
-2025-03-08 09:51:29,838 - INFO - Registry cache expired, so refreshing
-2025-03-08 09:51:30,902 - INFO - Retrieved 7043 rows before filtering.
-2025-03-08 09:51:30,908 - INFO - Filtered to 7043 rows within 2024-03-01 00:00:00+00:00 to 2025-03-08 04:21:29.627175+00:00.
-2025-03-08 09:51:30,916 - INFO - First 5 rows of offline features:
-customerID                  event_timestamp  tenure  TotalCharges Churn
-2946-KIQSP 2025-03-08 04:21:29.627175+00:00      35       1175.85    No
-9593-CVZKR 2025-03-08 04:21:29.627175+00:00      56       1385.85    No
-2805-AUFQN 2025-03-08 04:21:29.627175+00:00      25        475.20    No
-5076-YVXCM 2025-03-08 04:21:29.627175+00:00      51       4149.45    No
-6893-ODYYE 2025-03-08 04:21:29.627175+00:00      50       4549.45    No
-2025-03-08 09:51:30,924 - INFO - Fetching online features for customers: ['7590-VHVEG', '5575-GNVDE', '3668-QPYBK']
-2025-03-08 09:51:31,131 - INFO - Found credentials in shared credentials file: ~/.aws/credentials
-2025-03-08 09:51:33,315 - INFO - Online feature retrieval successful. Retrieved 3 rows.
-2025-03-08 09:51:33,321 - INFO - Online features:
-customerID Churn  tenure  TotalCharges
-7590-VHVEG    No       1     29.850000
-5575-GNVDE    No      34   1889.500000
-3668-QPYBK   Yes       2    108.150002
-2025-03-08 09:51:33,323 - INFO - Feature retrieval completed successfully.
+2025-03-09 20:51:06,841 - INFO - Defining Feast entities and feature views.
+2025-03-09 20:51:06,857 - INFO - Feast feature definitions created successfully.
+2025-03-09 20:51:13,972 - INFO - Defining Feast entities and feature views.
+2025-03-09 20:51:13,972 - INFO - Feast feature definitions created successfully.
+2025-03-09 20:51:13,972 - INFO - Initializing FeatureStore at 'G:\My Drive\DataScienceMtech\Sem2\DataManagementForMachineLearning\Assignment\end-to-end-data-management-pipeline\customer_churn_feast/feature_repo'
+2025-03-09 20:51:14,356 - INFO - Registry file not found. Creating new registry.
+2025-03-09 20:51:14,372 - INFO - FeatureStore initialized successfully.
+2025-03-09 20:51:14,372 - INFO - Applying feature definitions to the store.
+2025-03-09 20:51:14,372 - INFO - Registry cache expired, so refreshing
+2025-03-09 20:51:14,372 - INFO - Registry cache expired, so refreshing
+2025-03-09 20:51:14,406 - INFO - Found credentials in shared credentials file: ~/.aws/credentials
+2025-03-09 20:51:37,315 - INFO - Feature definitions applied successfully.
+2025-03-09 20:51:37,315 - INFO - Registry cache expired, so refreshing
+2025-03-09 20:51:37,347 - INFO - Registry cache expired, so refreshing
+2025-03-09 20:51:37,347 - INFO - Registry cache expired, so refreshing
+2025-03-09 20:53:50,423 - INFO - Features materialized successfully.
+2025-03-09 20:53:50,423 - INFO - Feast apply process completed successfully.
+2025-03-09 22:48:38,904 - INFO - Defining Feast entities and feature views.
+2025-03-09 22:48:38,904 - INFO - Feast feature definitions created successfully.
+2025-03-09 22:48:52,558 - INFO - Defining Feast entities and feature views.
+2025-03-09 22:48:52,558 - INFO - Feast feature definitions created successfully.
+2025-03-09 22:48:52,558 - INFO - Initializing FeatureStore at 'G:\My Drive\DataScienceMtech\Sem2\DataManagementForMachineLearning\Assignment\end-to-end-data-management-pipeline\customer_churn_feast/feature_repo'
+2025-03-09 22:48:52,923 - INFO - Registry file not found. Creating new registry.
+2025-03-09 22:48:52,945 - INFO - FeatureStore initialized successfully.
+2025-03-09 22:48:52,945 - INFO - Applying feature definitions to the store.
+2025-03-09 22:48:52,946 - INFO - Registry cache expired, so refreshing
+2025-03-09 22:48:52,954 - INFO - Registry cache expired, so refreshing
+2025-03-09 22:48:53,074 - INFO - Found credentials in shared credentials file: ~/.aws/credentials
+2025-03-09 22:48:55,792 - INFO - Feature definitions applied successfully.
+2025-03-09 22:48:55,792 - INFO - Registry cache expired, so refreshing
+2025-03-09 22:48:55,847 - INFO - Registry cache expired, so refreshing
+2025-03-09 22:48:55,854 - INFO - Registry cache expired, so refreshing
+2025-03-09 22:50:35,180 - ERROR - An error occurred during the Feast apply process: An error occurred (ResourceNotFoundException) when calling the BatchWriteItem operation: Requested resource not found
+2025-03-09 22:50:50,348 - INFO - Defining Feast entities and feature views.
+2025-03-09 22:50:50,348 - INFO - Feast feature definitions created successfully.
+2025-03-09 22:50:50,348 - INFO - Initializing FeatureStore at 'G:\My Drive\DataScienceMtech\Sem2\DataManagementForMachineLearning\Assignment\end-to-end-data-management-pipeline\customer_churn_feast/feature_repo'
+2025-03-09 22:50:50,724 - INFO - FeatureStore initialized successfully.
+2025-03-09 22:50:50,724 - INFO - Applying feature definitions to the store.
+2025-03-09 22:50:50,724 - INFO - Registry cache expired, so refreshing
+2025-03-09 22:50:50,729 - INFO - Found credentials in shared credentials file: ~/.aws/credentials
+2025-03-09 22:51:13,572 - INFO - Feature definitions applied successfully.
+2025-03-09 22:51:13,573 - INFO - Registry cache expired, so refreshing
+2025-03-09 22:51:13,585 - INFO - Registry cache expired, so refreshing
+2025-03-09 22:51:13,591 - INFO - Registry cache expired, so refreshing
+2025-03-09 22:53:13,434 - INFO - Features materialized successfully.
+2025-03-09 22:53:13,434 - INFO - Feast apply process completed successfully.
+2025-03-09 22:56:03,259 - INFO - Defining Feast entities and feature views.
+2025-03-09 22:56:03,263 - INFO - Feast feature definitions created successfully.
+2025-03-09 22:56:03,263 - INFO - Initializing FeatureStore at 'G:\My Drive\DataScienceMtech\Sem2\DataManagementForMachineLearning\Assignment\end-to-end-data-management-pipeline\customer_churn_feast/feature_repo'
+2025-03-09 22:56:03,614 - INFO - FeatureStore initialized successfully.
+2025-03-09 22:56:03,615 - INFO - Fetching online features for customers: ['7729-JTEEC', '4909-JOUPP', '4657-FWVFY']
+2025-03-09 22:56:03,621 - ERROR - Online feature retrieval failed: 'Feature TotalCharges not found in projection customer_features'
+2025-03-09 22:56:03,621 - ERROR - Feature retrieval process failed: 'Feature TotalCharges not found in projection customer_features'
+2025-03-09 22:58:09,570 - INFO - Defining Feast entities and feature views.
+2025-03-09 22:58:09,573 - INFO - Feast feature definitions created successfully.
+2025-03-09 22:58:09,574 - INFO - Initializing FeatureStore at 'G:\My Drive\DataScienceMtech\Sem2\DataManagementForMachineLearning\Assignment\end-to-end-data-management-pipeline\customer_churn_feast/feature_repo'
+2025-03-09 22:58:09,913 - INFO - FeatureStore initialized successfully.
+2025-03-09 22:58:09,913 - INFO - Fetching online features for customers: ['7729-JTEEC', '4909-JOUPP', '4657-FWVFY']
+2025-03-09 22:58:09,920 - ERROR - Online feature retrieval failed: 'Feature TotalCharges not found in projection customer_features'
+2025-03-09 22:58:09,920 - ERROR - Feature retrieval process failed: 'Feature TotalCharges not found in projection customer_features'
+2025-03-09 22:59:13,989 - INFO - Defining Feast entities and feature views.
+2025-03-09 22:59:13,993 - INFO - Feast feature definitions created successfully.
+2025-03-09 22:59:13,993 - INFO - Initializing FeatureStore at 'G:\My Drive\DataScienceMtech\Sem2\DataManagementForMachineLearning\Assignment\end-to-end-data-management-pipeline\customer_churn_feast/feature_repo'
+2025-03-09 22:59:14,338 - INFO - FeatureStore initialized successfully.
+2025-03-09 22:59:14,338 - INFO - Fetching online features for customers: ['7729-JTEEC', '4909-JOUPP', '4657-FWVFY']
+2025-03-09 22:59:14,437 - INFO - Found credentials in shared credentials file: ~/.aws/credentials
+2025-03-09 22:59:15,816 - INFO - Online feature retrieval successful. Retrieved 3 rows.
+2025-03-09 22:59:15,820 - INFO - Online features:
+customerid  tenure churn totalcharges
+7729-JTEEC       2    No        90.05
+4909-JOUPP      72    No      7898.45
+4657-FWVFY      40    No       3915.4
+2025-03-09 22:59:15,820 - INFO - Feature retrieval completed successfully.
+2025-03-09 23:02:28,611 - INFO - Defining Feast entities and feature views.
+2025-03-09 23:02:28,615 - INFO - Feast feature definitions created successfully.
+2025-03-09 23:02:28,615 - INFO - Initializing FeatureStore at 'G:\My Drive\DataScienceMtech\Sem2\DataManagementForMachineLearning\Assignment\end-to-end-data-management-pipeline\customer_churn_feast/feature_repo'
+2025-03-09 23:02:28,984 - INFO - FeatureStore initialized successfully.
+2025-03-09 23:02:28,986 - INFO - Fetching online features for customers: ['7729-JTEEC', '4909-JOUPP', '4657-FWVFY']
+2025-03-09 23:02:29,083 - INFO - Found credentials in shared credentials file: ~/.aws/credentials
+2025-03-09 23:02:30,573 - INFO - Online feature retrieval successful. Retrieved 3 rows.
+2025-03-09 23:02:30,576 - INFO - Online features:
+customerid  tenure totalcharges churn
+7729-JTEEC       2        90.05    No
+4909-JOUPP      72      7898.45    No
+4657-FWVFY      40       3915.4    No
+2025-03-09 23:02:30,577 - INFO - Fetching all offline features from Redshift for period: 2024-03-01 00:00:00+00:00 to 2025-03-09 17:32:30.577582+00:00
+2025-03-09 23:02:30,581 - INFO - Executing query: 
+        SELECT DISTINCT customerid, event_timestamp
+        FROM customer_warehouse
+        WHERE event_timestamp BETWEEN '2024-03-01 00:00:00' AND '2025-03-09 17:32:30'
+        
+2025-03-09 23:02:30,581 - ERROR - Offline feature retrieval failed from Redshift: name 'connection' is not defined
+2025-03-09 23:02:30,582 - ERROR - Feature retrieval process failed: name 'connection' is not defined
+2025-03-09 23:12:57,216 - INFO - Defining Feast entities and feature views.
+2025-03-09 23:12:57,229 - INFO - Feast feature definitions created successfully.
+2025-03-09 23:12:57,230 - INFO - Initializing FeatureStore at 'G:\My Drive\DataScienceMtech\Sem2\DataManagementForMachineLearning\Assignment\end-to-end-data-management-pipeline\customer_churn_feast/feature_repo'
+2025-03-09 23:12:57,694 - INFO - FeatureStore initialized successfully.
+2025-03-09 23:12:57,694 - INFO - Fetching online features for customers: ['7729-JTEEC', '4909-JOUPP', '4657-FWVFY']
+2025-03-09 23:12:57,797 - INFO - Found credentials in shared credentials file: ~/.aws/credentials
+2025-03-09 23:12:59,515 - INFO - Online feature retrieval successful. Retrieved 3 rows.
+2025-03-09 23:12:59,517 - INFO - Online features:
+customerid churn totalcharges  tenure
+7729-JTEEC    No        90.05       2
+4909-JOUPP    No      7898.45      72
+4657-FWVFY    No       3915.4      40
+2025-03-09 23:12:59,518 - ERROR - Feature retrieval process failed: name 'get_offline_features' is not defined
+2025-03-09 23:13:28,087 - INFO - Defining Feast entities and feature views.
+2025-03-09 23:13:28,091 - INFO - Feast feature definitions created successfully.
+2025-03-09 23:13:28,092 - INFO - Initializing FeatureStore at 'G:\My Drive\DataScienceMtech\Sem2\DataManagementForMachineLearning\Assignment\end-to-end-data-management-pipeline\customer_churn_feast/feature_repo'
+2025-03-09 23:13:28,435 - INFO - FeatureStore initialized successfully.
+2025-03-09 23:13:28,435 - INFO - Fetching online features for customers: ['7729-JTEEC', '4909-JOUPP', '4657-FWVFY']
+2025-03-09 23:13:28,519 - INFO - Found credentials in shared credentials file: ~/.aws/credentials
+2025-03-09 23:13:29,929 - INFO - Online feature retrieval successful. Retrieved 3 rows.
+2025-03-09 23:13:29,933 - INFO - Online features:
+customerid churn totalcharges  tenure
+7729-JTEEC    No        90.05       2
+4909-JOUPP    No      7898.45      72
+4657-FWVFY    No       3915.4      40
+2025-03-09 23:13:29,934 - ERROR - Feature retrieval process failed: get_all_offline_features() takes 1 positional argument but 3 were given
+2025-03-09 23:13:58,007 - INFO - Defining Feast entities and feature views.
+2025-03-09 23:13:58,011 - INFO - Feast feature definitions created successfully.
+2025-03-09 23:13:58,012 - INFO - Initializing FeatureStore at 'G:\My Drive\DataScienceMtech\Sem2\DataManagementForMachineLearning\Assignment\end-to-end-data-management-pipeline\customer_churn_feast/feature_repo'
+2025-03-09 23:13:58,371 - INFO - FeatureStore initialized successfully.
+2025-03-09 23:13:58,372 - INFO - Fetching online features for customers: ['7729-JTEEC', '4909-JOUPP', '4657-FWVFY']
+2025-03-09 23:13:58,463 - INFO - Found credentials in shared credentials file: ~/.aws/credentials
+2025-03-09 23:13:59,918 - INFO - Online feature retrieval successful. Retrieved 3 rows.
+2025-03-09 23:13:59,920 - INFO - Online features:
+customerid churn  tenure totalcharges
+7729-JTEEC    No       2        90.05
+4909-JOUPP    No      72      7898.45
+4657-FWVFY    No      40       3915.4
+2025-03-09 23:13:59,921 - INFO - Registry cache expired, so refreshing
+2025-03-09 23:13:59,928 - INFO - Registry cache expired, so refreshing
+2025-03-09 23:13:59,933 - INFO - Registry cache expired, so refreshing
+2025-03-09 23:13:59,938 - INFO - Registry cache expired, so refreshing
+2025-03-09 23:13:59,944 - INFO - Registry cache expired, so refreshing
+2025-03-09 23:13:59,948 - INFO - Registry cache expired, so refreshing
+2025-03-09 23:13:59,954 - INFO - Registry cache expired, so refreshing
+2025-03-09 23:13:59,959 - INFO - Registry cache expired, so refreshing
+2025-03-09 23:13:59,964 - INFO - Registry cache expired, so refreshing
+2025-03-09 23:13:59,971 - INFO - Registry cache expired, so refreshing
+2025-03-09 23:13:59,978 - INFO - Registry cache expired, so refreshing
+2025-03-09 23:13:59,983 - INFO - Registry cache expired, so refreshing
+2025-03-09 23:13:59,989 - INFO - Registry cache expired, so refreshing
+2025-03-09 23:13:59,995 - INFO - Registry cache expired, so refreshing
+2025-03-09 23:14:00,000 - INFO - Registry cache expired, so refreshing
+2025-03-09 23:14:00,005 - INFO - Registry cache expired, so refreshing
+2025-03-09 23:14:00,011 - INFO - Registry cache expired, so refreshing
+2025-03-09 23:14:00,017 - INFO - Registry cache expired, so refreshing
+2025-03-09 23:14:00,024 - INFO - Registry cache expired, so refreshing
+2025-03-09 23:14:00,030 - INFO - Registry cache expired, so refreshing
+2025-03-09 23:14:00,034 - INFO - Registry cache expired, so refreshing
+2025-03-09 23:14:00,091 - ERROR - Feature retrieval process failed: The entity dataframe you have provided must be a Pandas DataFrame or a SQL query, but we found: <class 'NoneType'> 
+2025-03-09 23:16:51,950 - INFO - Defining Feast entities and feature views.
+2025-03-09 23:16:51,955 - INFO - Feast feature definitions created successfully.
+2025-03-09 23:16:51,956 - INFO - Initializing FeatureStore at 'G:\My Drive\DataScienceMtech\Sem2\DataManagementForMachineLearning\Assignment\end-to-end-data-management-pipeline\customer_churn_feast/feature_repo'
+2025-03-09 23:16:52,292 - INFO - FeatureStore initialized successfully.
+2025-03-09 23:16:52,294 - INFO - Fetching online features for customers: ['7729-JTEEC', '4909-JOUPP', '4657-FWVFY']
+2025-03-09 23:16:52,384 - INFO - Found credentials in shared credentials file: ~/.aws/credentials
+2025-03-09 23:16:53,836 - INFO - Online feature retrieval successful. Retrieved 3 rows.
+2025-03-09 23:16:53,844 - INFO - Online features:
+customerid  tenure churn totalcharges
+7729-JTEEC       2    No        90.05
+4909-JOUPP      72    No      7898.45
+4657-FWVFY      40    No       3915.4
+2025-03-09 23:16:53,846 - INFO - Registry cache expired, so refreshing
+2025-03-09 23:16:53,871 - ERROR - Feature retrieval process failed: 'str' object has no attribute 'name'
+2025-03-09 23:25:47,530 - INFO - Defining Feast entities and feature views.
+2025-03-09 23:25:47,546 - INFO - Feast feature definitions created successfully.
+2025-03-09 23:25:47,546 - INFO - Feast feature service created successfully.
+2025-03-09 23:25:59,959 - INFO - Defining Feast entities and feature views.
+2025-03-09 23:25:59,974 - INFO - Feast feature definitions created successfully.
+2025-03-09 23:25:59,974 - INFO - Feast feature service created successfully.
+2025-03-09 23:25:59,979 - INFO - Initializing FeatureStore at 'G:\My Drive\DataScienceMtech\Sem2\DataManagementForMachineLearning\Assignment\end-to-end-data-management-pipeline\customer_churn_feast/feature_repo'
+2025-03-09 23:26:00,355 - INFO - FeatureStore initialized successfully.
+2025-03-09 23:26:00,355 - INFO - Applying feature definitions to the store.
+2025-03-09 23:26:00,355 - INFO - Registry cache expired, so refreshing
+2025-03-09 23:26:00,379 - INFO - Found credentials in shared credentials file: ~/.aws/credentials
+2025-03-09 23:26:03,298 - INFO - Feature definitions applied successfully.
+2025-03-09 23:26:03,298 - INFO - Registry cache expired, so refreshing
+2025-03-09 23:26:03,309 - INFO - Registry cache expired, so refreshing
+2025-03-09 23:26:03,314 - INFO - Registry cache expired, so refreshing
+2025-03-09 23:26:08,458 - INFO - Features materialized successfully.
+2025-03-09 23:26:08,458 - INFO - Feast apply process completed successfully.
+2025-03-09 23:26:38,819 - INFO - Defining Feast entities and feature views.
+2025-03-09 23:26:38,823 - INFO - Feast feature definitions created successfully.
+2025-03-09 23:26:38,823 - INFO - Feast feature service created successfully.
+2025-03-09 23:26:38,823 - INFO - Initializing FeatureStore at 'G:\My Drive\DataScienceMtech\Sem2\DataManagementForMachineLearning\Assignment\end-to-end-data-management-pipeline\customer_churn_feast/feature_repo'
+2025-03-09 23:26:39,160 - INFO - FeatureStore initialized successfully.
+2025-03-09 23:26:39,161 - INFO - Fetching online features for customers: ['7729-JTEEC', '4909-JOUPP', '4657-FWVFY']
+2025-03-09 23:26:39,253 - INFO - Found credentials in shared credentials file: ~/.aws/credentials
+2025-03-09 23:26:40,865 - INFO - Online feature retrieval successful. Retrieved 3 rows.
+2025-03-09 23:26:40,868 - INFO - Online features:
+customerid  tenure totalcharges churn
+7729-JTEEC       2        90.05    No
+4909-JOUPP      72      7898.45    No
+4657-FWVFY      40       3915.4    No
+2025-03-09 23:26:40,869 - INFO - Registry cache expired, so refreshing
+2025-03-09 23:26:40,873 - ERROR - Feature retrieval process failed: Feature service churn_model_svc does not exist in project customer_churn_feast
+2025-03-09 23:27:17,002 - INFO - Defining Feast entities and feature views.
+2025-03-09 23:27:17,002 - INFO - Feast feature definitions created successfully.
+2025-03-09 23:27:17,002 - INFO - Feast feature service created successfully.
+2025-03-09 23:27:25,026 - INFO - Defining Feast entities and feature views.
+2025-03-09 23:27:25,026 - INFO - Feast feature definitions created successfully.
+2025-03-09 23:27:25,026 - INFO - Feast feature service created successfully.
+2025-03-09 23:27:25,026 - INFO - Initializing FeatureStore at 'G:\My Drive\DataScienceMtech\Sem2\DataManagementForMachineLearning\Assignment\end-to-end-data-management-pipeline\customer_churn_feast/feature_repo'
+2025-03-09 23:27:25,401 - INFO - Registry file not found. Creating new registry.
+2025-03-09 23:27:25,417 - INFO - FeatureStore initialized successfully.
+2025-03-09 23:27:25,417 - INFO - Applying feature definitions to the store.
+2025-03-09 23:27:25,417 - INFO - Registry cache expired, so refreshing
+2025-03-09 23:27:25,433 - INFO - Registry cache expired, so refreshing
+2025-03-09 23:27:25,448 - INFO - Found credentials in shared credentials file: ~/.aws/credentials
+2025-03-09 23:27:28,438 - INFO - Feature definitions applied successfully.
+2025-03-09 23:27:28,438 - INFO - Registry cache expired, so refreshing
+2025-03-09 23:27:28,464 - INFO - Registry cache expired, so refreshing
+2025-03-09 23:27:28,464 - INFO - Registry cache expired, so refreshing
+2025-03-09 23:29:43,111 - INFO - Features materialized successfully.
+2025-03-09 23:29:43,118 - INFO - Feast apply process completed successfully.
+2025-03-09 23:30:35,004 - INFO - Defining Feast entities and feature views.
+2025-03-09 23:30:35,008 - INFO - Feast feature definitions created successfully.
+2025-03-09 23:30:35,008 - INFO - Feast feature service created successfully.
+2025-03-09 23:30:35,009 - INFO - Initializing FeatureStore at 'G:\My Drive\DataScienceMtech\Sem2\DataManagementForMachineLearning\Assignment\end-to-end-data-management-pipeline\customer_churn_feast/feature_repo'
+2025-03-09 23:30:35,346 - INFO - FeatureStore initialized successfully.
+2025-03-09 23:30:35,347 - INFO - Fetching online features for customers: ['7729-JTEEC', '4909-JOUPP', '4657-FWVFY']
+2025-03-09 23:30:35,437 - INFO - Found credentials in shared credentials file: ~/.aws/credentials
+2025-03-09 23:30:37,017 - INFO - Online feature retrieval successful. Retrieved 3 rows.
+2025-03-09 23:30:37,026 - INFO - Online features:
+customerid churn  tenure totalcharges
+7729-JTEEC    No       2        90.05
+4909-JOUPP    No      72      7898.45
+4657-FWVFY    No      40       3915.4
+2025-03-09 23:30:37,028 - INFO - Registry cache expired, so refreshing
+2025-03-09 23:30:37,047 - ERROR - Feature retrieval process failed: Feature service churn_model_svc does not exist in project customer_churn_feast
+2025-03-09 23:34:14,402 - INFO - Defining Feast entities and feature views.
+2025-03-09 23:34:14,407 - INFO - Feast feature definitions created successfully.
+2025-03-09 23:34:14,408 - INFO - Feast feature service created successfully.
+2025-03-09 23:34:14,409 - INFO - Initializing FeatureStore at 'G:\My Drive\DataScienceMtech\Sem2\DataManagementForMachineLearning\Assignment\end-to-end-data-management-pipeline\customer_churn_feast/feature_repo'
+2025-03-09 23:34:14,819 - INFO - FeatureStore initialized successfully.
+2025-03-09 23:34:14,819 - INFO - Fetching online features for customers: ['7729-JTEEC', '4909-JOUPP', '4657-FWVFY']
+2025-03-09 23:34:14,928 - INFO - Found credentials in shared credentials file: ~/.aws/credentials
+2025-03-09 23:34:16,874 - INFO - Online feature retrieval successful. Retrieved 3 rows.
+2025-03-09 23:34:16,877 - INFO - Online features:
+customerid churn  tenure totalcharges
+7729-JTEEC    No       2        90.05
+4909-JOUPP    No      72      7898.45
+4657-FWVFY    No      40       3915.4
+2025-03-09 23:34:16,877 - INFO - Registry cache expired, so refreshing
+2025-03-09 23:34:16,883 - INFO - Registry cache expired, so refreshing
+2025-03-09 23:34:16,893 - ERROR - Feature retrieval process failed: name 'offline_features' is not defined
+2025-03-09 23:39:27,785 - INFO - Defining Feast entities and feature views.
+2025-03-09 23:39:27,789 - INFO - Feast feature definitions created successfully.
+2025-03-09 23:39:27,789 - INFO - Feast feature service created successfully.
+2025-03-09 23:40:18,592 - INFO - Defining Feast entities and feature views.
+2025-03-09 23:40:18,596 - INFO - Feast feature definitions created successfully.
+2025-03-09 23:40:18,597 - INFO - Feast feature service created successfully.
+2025-03-09 23:40:18,597 - INFO - Initializing FeatureStore at 'G:\My Drive\DataScienceMtech\Sem2\DataManagementForMachineLearning\Assignment\end-to-end-data-management-pipeline\customer_churn_feast/feature_repo'
+2025-03-09 23:40:18,944 - INFO - FeatureStore initialized successfully.
+2025-03-09 23:40:18,944 - INFO - Fetching online features for customers: ['7729-JTEEC', '4909-JOUPP', '4657-FWVFY']
+2025-03-09 23:40:19,036 - INFO - Found credentials in shared credentials file: ~/.aws/credentials
+2025-03-09 23:40:20,626 - INFO - Online feature retrieval successful. Retrieved 3 rows.
+2025-03-09 23:40:20,635 - INFO - Online features:
+customerid  tenure churn totalcharges
+7729-JTEEC       2    No        90.05
+4909-JOUPP      72    No      7898.45
+4657-FWVFY      40    No       3915.4
+2025-03-09 23:40:20,637 - INFO - Registry cache expired, so refreshing
+2025-03-09 23:40:20,690 - ERROR - Feature retrieval process failed: 'Feature * not found in projection customer_features'
+2025-03-09 23:41:36,927 - INFO - Defining Feast entities and feature views.
+2025-03-09 23:41:36,927 - INFO - Feast feature definitions created successfully.
+2025-03-09 23:41:36,927 - INFO - Feast feature service created successfully.
+2025-03-09 23:41:36,927 - INFO - Initializing FeatureStore at 'G:\My Drive\DataScienceMtech\Sem2\DataManagementForMachineLearning\Assignment\end-to-end-data-management-pipeline\customer_churn_feast/feature_repo'
+2025-03-09 23:41:37,313 - INFO - FeatureStore initialized successfully.
+2025-03-09 23:41:37,313 - INFO - Fetching online features for customers: ['7729-JTEEC', '4909-JOUPP', '4657-FWVFY']
+2025-03-09 23:41:37,405 - INFO - Found credentials in shared credentials file: ~/.aws/credentials
+2025-03-09 23:41:39,018 - INFO - Online feature retrieval successful. Retrieved 3 rows.
+2025-03-09 23:41:39,036 - INFO - Online features:
+customerid totalcharges  tenure churn
+7729-JTEEC        90.05       2    No
+4909-JOUPP      7898.45      72    No
+4657-FWVFY       3915.4      40    No
+2025-03-09 23:41:39,036 - INFO - Registry cache expired, so refreshing
+2025-03-09 23:41:39,078 - ERROR - Feature retrieval process failed: 'str' object has no attribute 'name'
+2025-03-09 23:42:40,572 - INFO - Defining Feast entities and feature views.
+2025-03-09 23:42:40,582 - INFO - Feast feature definitions created successfully.
+2025-03-09 23:42:40,582 - INFO - Feast feature service created successfully.
+2025-03-09 23:42:40,582 - INFO - Initializing FeatureStore at 'G:\My Drive\DataScienceMtech\Sem2\DataManagementForMachineLearning\Assignment\end-to-end-data-management-pipeline\customer_churn_feast/feature_repo'
+2025-03-09 23:42:41,022 - INFO - FeatureStore initialized successfully.
+2025-03-09 23:42:41,022 - INFO - Fetching online features for customers: ['7729-JTEEC', '4909-JOUPP', '4657-FWVFY']
+2025-03-09 23:42:41,112 - INFO - Found credentials in shared credentials file: ~/.aws/credentials
+2025-03-09 23:42:42,669 - INFO - Online feature retrieval successful. Retrieved 3 rows.
+2025-03-09 23:42:42,680 - INFO - Online features:
+customerid totalcharges churn  tenure
+7729-JTEEC        90.05    No       2
+4909-JOUPP      7898.45    No      72
+4657-FWVFY       3915.4    No      40
+2025-03-09 23:42:42,680 - INFO - Registry cache expired, so refreshing
+2025-03-09 23:42:42,711 - ERROR - Feature retrieval process failed: 'FeatureStore' object has no attribute 'offline_store'
+2025-03-09 23:44:04,245 - INFO - Defining Feast entities and feature views.
+2025-03-09 23:44:04,261 - INFO - Feast feature definitions created successfully.
+2025-03-09 23:44:04,261 - INFO - Feast feature service created successfully.
+2025-03-09 23:44:21,822 - INFO - Defining Feast entities and feature views.
+2025-03-09 23:44:21,822 - INFO - Feast feature definitions created successfully.
+2025-03-09 23:44:21,822 - INFO - Feast feature service created successfully.
+2025-03-09 23:44:21,822 - INFO - Initializing FeatureStore at 'G:\My Drive\DataScienceMtech\Sem2\DataManagementForMachineLearning\Assignment\end-to-end-data-management-pipeline\customer_churn_feast/feature_repo'
+2025-03-09 23:44:22,207 - INFO - FeatureStore initialized successfully.
+2025-03-09 23:44:22,207 - ERROR - Feature retrieval process failed: name 'get_all_offline_features' is not defined
+2025-03-09 23:44:44,784 - INFO - Defining Feast entities and feature views.
+2025-03-09 23:44:44,788 - INFO - Feast feature definitions created successfully.
+2025-03-09 23:44:44,788 - INFO - Feast feature service created successfully.
+2025-03-09 23:44:44,791 - INFO - Initializing FeatureStore at 'G:\My Drive\DataScienceMtech\Sem2\DataManagementForMachineLearning\Assignment\end-to-end-data-management-pipeline\customer_churn_feast/feature_repo'
+2025-03-09 23:44:45,173 - INFO - FeatureStore initialized successfully.
+2025-03-09 23:44:45,173 - INFO - Registry cache expired, so refreshing
+2025-03-09 23:44:45,180 - INFO - Registry cache expired, so refreshing
+2025-03-09 23:44:45,180 - INFO - Registry cache expired, so refreshing
+2025-03-09 23:44:45,191 - INFO - Registry cache expired, so refreshing
+2025-03-09 23:44:45,191 - INFO - Registry cache expired, so refreshing
+2025-03-09 23:44:45,203 - INFO - Registry cache expired, so refreshing
+2025-03-09 23:44:45,211 - INFO - Registry cache expired, so refreshing
+2025-03-09 23:44:45,218 - INFO - Registry cache expired, so refreshing
+2025-03-09 23:44:45,227 - INFO - Registry cache expired, so refreshing
+2025-03-09 23:44:45,234 - INFO - Registry cache expired, so refreshing
+2025-03-09 23:44:45,242 - INFO - Registry cache expired, so refreshing
+2025-03-09 23:44:45,249 - INFO - Registry cache expired, so refreshing
+2025-03-09 23:44:45,257 - INFO - Registry cache expired, so refreshing
+2025-03-09 23:44:45,265 - INFO - Registry cache expired, so refreshing
+2025-03-09 23:44:45,271 - INFO - Registry cache expired, so refreshing
+2025-03-09 23:44:45,279 - INFO - Registry cache expired, so refreshing
+2025-03-09 23:44:45,287 - INFO - Registry cache expired, so refreshing
+2025-03-09 23:44:45,296 - INFO - Registry cache expired, so refreshing
+2025-03-09 23:44:45,303 - INFO - Registry cache expired, so refreshing
+2025-03-09 23:44:45,303 - INFO - Registry cache expired, so refreshing
+2025-03-09 23:44:45,325 - INFO - Found credentials in shared credentials file: ~/.aws/credentials
+2025-03-09 23:45:07,041 - ERROR - Feature retrieval process failed: Please provide an entity_df with a column named event_timestamp representing the time of events.
+2025-03-09 23:45:48,716 - INFO - Defining Feast entities and feature views.
+2025-03-09 23:45:48,732 - INFO - Feast feature definitions created successfully.
+2025-03-09 23:45:48,732 - INFO - Feast feature service created successfully.
+2025-03-09 23:45:48,732 - INFO - Initializing FeatureStore at 'G:\My Drive\DataScienceMtech\Sem2\DataManagementForMachineLearning\Assignment\end-to-end-data-management-pipeline\customer_churn_feast/feature_repo'
+2025-03-09 23:45:49,099 - INFO - FeatureStore initialized successfully.
+2025-03-09 23:45:49,099 - INFO - Registry cache expired, so refreshing
+2025-03-09 23:45:49,115 - INFO - Registry cache expired, so refreshing
+2025-03-09 23:45:49,115 - INFO - Registry cache expired, so refreshing
+2025-03-09 23:45:49,115 - INFO - Registry cache expired, so refreshing
+2025-03-09 23:45:49,131 - INFO - Registry cache expired, so refreshing
+2025-03-09 23:45:49,131 - INFO - Registry cache expired, so refreshing
+2025-03-09 23:45:49,131 - INFO - Registry cache expired, so refreshing
+2025-03-09 23:45:49,146 - INFO - Registry cache expired, so refreshing
+2025-03-09 23:45:49,146 - INFO - Registry cache expired, so refreshing
+2025-03-09 23:45:49,162 - INFO - Registry cache expired, so refreshing
+2025-03-09 23:45:49,162 - INFO - Registry cache expired, so refreshing
+2025-03-09 23:45:49,162 - INFO - Registry cache expired, so refreshing
+2025-03-09 23:45:49,178 - INFO - Registry cache expired, so refreshing
+2025-03-09 23:45:49,178 - INFO - Registry cache expired, so refreshing
+2025-03-09 23:45:49,178 - INFO - Registry cache expired, so refreshing
+2025-03-09 23:45:49,178 - INFO - Registry cache expired, so refreshing
+2025-03-09 23:45:49,194 - INFO - Registry cache expired, so refreshing
+2025-03-09 23:45:49,194 - INFO - Registry cache expired, so refreshing
+2025-03-09 23:45:49,194 - INFO - Registry cache expired, so refreshing
+2025-03-09 23:45:49,210 - INFO - Registry cache expired, so refreshing
+2025-03-09 23:45:49,210 - INFO - Registry cache expired, so refreshing
+2025-03-09 23:45:49,210 - ERROR - Feature retrieval process failed: 'Feature event_timestamp not found in projection customer_features'
+2025-03-09 23:49:00,745 - INFO - Defining Feast entities and feature views.
+2025-03-09 23:49:00,745 - INFO - Feast feature definitions created successfully.
+2025-03-09 23:49:00,745 - INFO - Feast feature service created successfully.
+2025-03-09 23:49:08,472 - INFO - Defining Feast entities and feature views.
+2025-03-09 23:49:08,472 - INFO - Feast feature definitions created successfully.
+2025-03-09 23:49:08,472 - INFO - Feast feature service created successfully.
+2025-03-09 23:49:08,472 - INFO - Initializing FeatureStore at 'G:\My Drive\DataScienceMtech\Sem2\DataManagementForMachineLearning\Assignment\end-to-end-data-management-pipeline\customer_churn_feast/feature_repo'
+2025-03-09 23:49:08,871 - INFO - Registry file not found. Creating new registry.
+2025-03-09 23:49:08,872 - INFO - FeatureStore initialized successfully.
+2025-03-09 23:49:08,872 - INFO - Applying feature definitions to the store.
+2025-03-09 23:49:08,872 - INFO - Registry cache expired, so refreshing
+2025-03-09 23:49:08,888 - INFO - Registry cache expired, so refreshing
+2025-03-09 23:49:08,909 - INFO - Found credentials in shared credentials file: ~/.aws/credentials
+2025-03-09 23:49:11,941 - INFO - Feature definitions applied successfully.
+2025-03-09 23:49:11,943 - INFO - Registry cache expired, so refreshing
+2025-03-09 23:49:11,945 - INFO - Registry cache expired, so refreshing
+2025-03-09 23:49:11,945 - INFO - Registry cache expired, so refreshing
+2025-03-09 23:51:28,227 - INFO - Features materialized successfully.
+2025-03-09 23:51:28,227 - INFO - Feast apply process completed successfully.
+2025-03-09 23:52:03,111 - INFO - Defining Feast entities and feature views.
+2025-03-09 23:52:03,127 - INFO - Feast feature definitions created successfully.
+2025-03-09 23:52:03,127 - INFO - Feast feature service created successfully.
+2025-03-09 23:52:03,127 - INFO - Initializing FeatureStore at 'G:\My Drive\DataScienceMtech\Sem2\DataManagementForMachineLearning\Assignment\end-to-end-data-management-pipeline\customer_churn_feast/feature_repo'
+2025-03-09 23:52:03,507 - INFO - FeatureStore initialized successfully.
+2025-03-09 23:52:03,507 - INFO - Registry cache expired, so refreshing
+2025-03-09 23:52:03,507 - INFO - Registry cache expired, so refreshing
+2025-03-09 23:52:03,507 - INFO - Registry cache expired, so refreshing
+2025-03-09 23:52:03,525 - INFO - Registry cache expired, so refreshing
+2025-03-09 23:52:03,525 - INFO - Registry cache expired, so refreshing
+2025-03-09 23:52:03,525 - INFO - Registry cache expired, so refreshing
+2025-03-09 23:52:03,539 - INFO - Registry cache expired, so refreshing
+2025-03-09 23:52:03,539 - INFO - Registry cache expired, so refreshing
+2025-03-09 23:52:03,554 - INFO - Registry cache expired, so refreshing
+2025-03-09 23:52:03,555 - INFO - Registry cache expired, so refreshing
+2025-03-09 23:52:03,555 - INFO - Registry cache expired, so refreshing
+2025-03-09 23:52:03,570 - INFO - Registry cache expired, so refreshing
+2025-03-09 23:52:03,570 - INFO - Registry cache expired, so refreshing
+2025-03-09 23:52:03,570 - INFO - Registry cache expired, so refreshing
+2025-03-09 23:52:03,586 - INFO - Registry cache expired, so refreshing
+2025-03-09 23:52:03,590 - INFO - Registry cache expired, so refreshing
+2025-03-09 23:52:03,590 - INFO - Registry cache expired, so refreshing
+2025-03-09 23:52:03,602 - INFO - Registry cache expired, so refreshing
+2025-03-09 23:52:03,602 - INFO - Registry cache expired, so refreshing
+2025-03-09 23:52:03,634 - INFO - Registry cache expired, so refreshing
+2025-03-09 23:52:03,650 - INFO - Registry cache expired, so refreshing
+2025-03-09 23:52:03,697 - INFO - Found credentials in shared credentials file: ~/.aws/credentials
+2025-03-09 23:52:10,093 - ERROR - Feature retrieval process failed: Please provide an entity_df with a column named event_timestamp representing the time of events.
+2025-03-09 23:54:13,243 - INFO - Defining Feast entities and feature views.
+2025-03-09 23:54:13,243 - INFO - Feast feature definitions created successfully.
+2025-03-09 23:54:13,243 - INFO - Feast feature service created successfully.
+2025-03-09 23:54:13,243 - INFO - Initializing FeatureStore at 'G:\My Drive\DataScienceMtech\Sem2\DataManagementForMachineLearning\Assignment\end-to-end-data-management-pipeline\customer_churn_feast/feature_repo'
+2025-03-09 23:54:13,630 - INFO - FeatureStore initialized successfully.
+2025-03-09 23:54:13,630 - INFO - Registry cache expired, so refreshing
+2025-03-09 23:54:13,630 - INFO - Registry cache expired, so refreshing
+2025-03-09 23:54:13,644 - INFO - Registry cache expired, so refreshing
+2025-03-09 23:54:13,644 - INFO - Registry cache expired, so refreshing
+2025-03-09 23:54:13,658 - INFO - Registry cache expired, so refreshing
+2025-03-09 23:54:13,658 - INFO - Registry cache expired, so refreshing
+2025-03-09 23:54:13,658 - INFO - Registry cache expired, so refreshing
+2025-03-09 23:54:13,673 - INFO - Registry cache expired, so refreshing
+2025-03-09 23:54:13,673 - INFO - Registry cache expired, so refreshing
+2025-03-09 23:54:13,673 - INFO - Registry cache expired, so refreshing
+2025-03-09 23:54:13,689 - INFO - Registry cache expired, so refreshing
+2025-03-09 23:54:13,689 - INFO - Registry cache expired, so refreshing
+2025-03-09 23:54:13,689 - INFO - Registry cache expired, so refreshing
+2025-03-09 23:54:13,705 - INFO - Registry cache expired, so refreshing
+2025-03-09 23:54:13,705 - INFO - Registry cache expired, so refreshing
+2025-03-09 23:54:13,705 - INFO - Registry cache expired, so refreshing
+2025-03-09 23:54:13,721 - INFO - Registry cache expired, so refreshing
+2025-03-09 23:54:13,721 - INFO - Registry cache expired, so refreshing
+2025-03-09 23:54:13,730 - INFO - Registry cache expired, so refreshing
+2025-03-09 23:54:13,736 - INFO - Registry cache expired, so refreshing
+2025-03-09 23:54:13,736 - INFO - Registry cache expired, so refreshing
+2025-03-09 23:54:13,752 - INFO - Found credentials in shared credentials file: ~/.aws/credentials
+2025-03-09 23:54:48,641 - INFO - Registry cache expired, so refreshing
+2025-03-09 23:54:53,538 - ERROR - Feature retrieval process failed: Redshift SQL Query failed to finish. Details: {'CreatedAt': datetime.datetime(2025, 3, 9, 23, 54, 49, 202000, tzinfo=tzlocal()), 'Database': 'dev', 'DbUser': 'IAM:dmml-assignment-user', 'Duration': -1, 'Error': 'ERROR: column reference "event_timestamp" is ambiguous', 'HasResultSet': False, 'Id': '23c79e50-fe32-4d5f-9311-4cd62caa426f', 'QueryString': 'CREATE TEMPORARY TABLE _0aa63b041e7641bbb7ac93948546ceaa AS (\n/*\n Compute a deterministic hash for the `left_table_query_string` that will be used throughout\n all the logic as the field to GROUP BY the data\n*/\nWITH entity_dataframe AS (\n    SELECT *,\n        event_timestamp AS entity_timestamp\n        \n            \n            ,(\n                \n                    CAST(customerid as VARCHAR) ||\n                \n                CAST(event_timestamp AS VARCHAR)\n            ) AS customer_features__entity_row_unique_id\n            \n        \n    FROM feast_entity_df_fcc4ec3f07af4de686c593dd833a560a\n),\n\n\n\ncustomer_features__entity_dataframe AS (\n    SELECT\n        customerid,\n        entity_timestamp,\n        customer_features__entity_row_unique_id\n    FROM entity_dataframe\n    GROUP BY\n        customerid,\n        entity_timestamp,\n        customer_features__entity_row_unique_id\n),\n\n/*\n This query template performs the point-in-time correctness join for a single feature set table\n to the provided entity table.\n\n 1. We first join the current feature_view to the entity dataframe that has been passed.\n This JOIN has the following logic:\n    - For each row of the entity dataframe, only keep the rows where the `timestamp_field`\n    is less than the one provided in the entity dataframe\n    - If there a TTL for the current feature_view, also keep the rows where the `timestamp_field`\n    is higher the the one provided minus the TTL\n    - For each row, Join on the entity key and retrieve the `entity_row_unique_id` that has been\n    computed previously\n\n The output of this CTE will contain all the necessary information and already filtered out most\n of the data that is not relevant.\n*/\n\ncustomer_features__subquery AS (\n    SELECT\n        event_timestamp as event_timestamp,\n        \n        customerid AS customerid,\n        \n            gender as gender, \n        \n            seniorcitizen as seniorcitizen, \n        \n            partner as partner, \n        \n            dependents as dependents, \n        \n            tenure as tenure, \n        \n            phoneservice as phoneservice, \n        \n            multiplelines as multiplelines, \n        \n            internetservice as internetservice, \n        \n            onlinesecurity as onlinesecurity, \n        \n            onlinebackup as onlinebackup, \n        \n            deviceprotection as deviceprotection, \n        \n            techsupport as techsupport, \n        \n            streamingtv as streamingtv, \n        \n            streamingmovies as streamingmovies, \n        \n            contract as contract, \n        \n            paperlessbilling as paperlessbilling, \n        \n            paymentmethod as paymentmethod, \n        \n            monthlycharges as monthlycharges, \n        \n            totalcharges as totalcharges, \n        \n            churn as churn, \n        \n            event_timestamp as event_timestamp\n        \n    FROM "public"."customer_warehouse"\n    WHERE event_timestamp <= \'2025-03-09T14:38:22\'\n    \n),\n\ncustomer_features__base AS (\n    SELECT\n        subquery.*,\n        entity_dataframe.entity_timestamp,\n        entity_dataframe.customer_features__entity_row_unique_id\n    FROM customer_features__subquery AS subquery\n    INNER JOIN customer_features__entity_dataframe AS entity_dataframe\n    ON TRUE\n        AND subquery.event_timestamp <= entity_dataframe.entity_timestamp\n\n        \n\n        \n        AND subquery.customerid = entity_dataframe.customerid\n        \n),\n\n/*\n 2. If the `created_timestamp_column` has been set, we need to\n deduplicate the data first. This is done by calculating the\n `MAX(created_at_timestamp)` for each event_timestamp.\n We then join the data on the next CTE\n*/\n\n\n/*\n 3. The data has been filtered during the first CTE "*__base"\n Thus we only need to compute the latest timestamp of each feature.\n*/\ncustomer_features__latest AS (\n    SELECT\n        event_timestamp,\n        \n        customer_features__entity_row_unique_id\n    FROM\n    (\n        SELECT *,\n            ROW_NUMBER() OVER(\n                PARTITION BY customer_features__entity_row_unique_id\n                ORDER BY event_timestamp DESC\n            ) AS row_number\n        FROM customer_features__base\n        \n    )\n    WHERE row_number = 1\n),\n\n/*\n 4. Once we know the latest value of each feature for a given timestamp,\n we can join again the data back to the original "base" dataset\n*/\ncustomer_features__cleaned AS (\n    SELECT base.*\n    FROM customer_features__base as base\n    INNER JOIN customer_features__latest\n    USING(\n        customer_features__entity_row_unique_id,\n        event_timestamp\n        \n    )\n)\n\n\n\n/*\n Joins the outputs of multiple time travel joins to a single table.\n The entity_dataframe dataset being our source of truth here.\n */\n\nSELECT customerid, event_timestamp, gender, seniorcitizen, partner, dependents, tenure, phoneservice, multiplelines, internetservice, onlinesecurity, onlinebackup, deviceprotection, techsupport, streamingtv, streamingmovies, contract, paperlessbilling, paymentmethod, monthlycharges, totalcharges, churn, event_timestamp\nFROM entity_dataframe\n\nLEFT JOIN (\n    SELECT\n        customer_features__entity_row_unique_id\n        \n            ,gender\n        \n            ,seniorcitizen\n        \n            ,partner\n        \n            ,dependents\n        \n            ,tenure\n        \n            ,phoneservice\n        \n            ,multiplelines\n        \n            ,internetservice\n        \n            ,onlinesecurity\n        \n            ,onlinebackup\n        \n            ,deviceprotection\n        \n            ,techsupport\n        \n            ,streamingtv\n        \n            ,streamingmovies\n        \n            ,contract\n        \n            ,paperlessbilling\n        \n            ,paymentmethod\n        \n            ,monthlycharges\n        \n            ,totalcharges\n        \n            ,churn\n        \n            ,event_timestamp\n        \n    FROM customer_features__cleaned\n) USING (customer_features__entity_row_unique_id)\n);\nUNLOAD (\'SELECT * FROM _0aa63b041e7641bbb7ac93948546ceaa\') TO \'s3://dmml-assignment-bucket/parquet_datawarehouse//unload/d52d7f8f-4baa-403f-a1ba-0e23c9d8f488/\' IAM_ROLE \'\' FORMAT AS PARQUET', 'RedshiftPid': 1073873023, 'RedshiftQueryId': 0, 'ResultFormat': 'json', 'ResultRows': -1, 'ResultSize': -1, 'Status': 'FAILED', 'UpdatedAt': datetime.datetime(2025, 3, 9, 23, 54, 50, 29000, tzinfo=tzlocal()), 'WorkgroupName': 'my-redshift-workgroup', 'ResponseMetadata': {'RequestId': '5f0290db-b42a-43ad-841d-00efdb2067e3', 'HTTPStatusCode': 200, 'HTTPHeaders': {'x-amzn-requestid': '5f0290db-b42a-43ad-841d-00efdb2067e3', 'content-type': 'application/x-amz-json-1.1', 'content-length': '6870', 'date': 'Sun, 09 Mar 2025 18:24:51 GMT'}, 'RetryAttempts': 0}}
+2025-03-10 00:03:34,924 - INFO - Defining Feast entities and feature views.
+2025-03-10 00:03:34,924 - INFO - Feast feature definitions created successfully.
+2025-03-10 00:03:34,924 - INFO - Feast feature service created successfully.
+2025-03-10 00:03:34,924 - INFO - Initializing FeatureStore at 'G:\My Drive\DataScienceMtech\Sem2\DataManagementForMachineLearning\Assignment\end-to-end-data-management-pipeline\customer_churn_feast/feature_repo'
+2025-03-10 00:03:35,307 - INFO - FeatureStore initialized successfully.
+2025-03-10 00:03:35,307 - INFO - Registry cache expired, so refreshing
+2025-03-10 00:03:35,324 - INFO - Registry cache expired, so refreshing
+2025-03-10 00:03:35,324 - INFO - Registry cache expired, so refreshing
+2025-03-10 00:03:35,324 - INFO - Registry cache expired, so refreshing
+2025-03-10 00:03:35,343 - INFO - Registry cache expired, so refreshing
+2025-03-10 00:03:35,343 - INFO - Registry cache expired, so refreshing
+2025-03-10 00:03:35,343 - INFO - Registry cache expired, so refreshing
+2025-03-10 00:03:35,362 - INFO - Registry cache expired, so refreshing
+2025-03-10 00:03:35,367 - INFO - Registry cache expired, so refreshing
+2025-03-10 00:03:35,371 - INFO - Registry cache expired, so refreshing
+2025-03-10 00:03:35,377 - INFO - Registry cache expired, so refreshing
+2025-03-10 00:03:35,382 - INFO - Registry cache expired, so refreshing
+2025-03-10 00:03:35,388 - INFO - Registry cache expired, so refreshing
+2025-03-10 00:03:35,390 - INFO - Registry cache expired, so refreshing
+2025-03-10 00:03:35,390 - INFO - Registry cache expired, so refreshing
+2025-03-10 00:03:35,390 - INFO - Registry cache expired, so refreshing
+2025-03-10 00:03:35,406 - INFO - Registry cache expired, so refreshing
+2025-03-10 00:03:35,406 - INFO - Registry cache expired, so refreshing
+2025-03-10 00:03:35,406 - INFO - Registry cache expired, so refreshing
+2025-03-10 00:03:35,422 - INFO - Registry cache expired, so refreshing
+2025-03-10 00:03:35,422 - INFO - Registry cache expired, so refreshing
+2025-03-10 00:03:35,438 - INFO - Found credentials in shared credentials file: ~/.aws/credentials
+2025-03-10 00:03:45,914 - INFO - Registry cache expired, so refreshing
+2025-03-10 00:03:50,418 - ERROR - Feature retrieval process failed: Redshift SQL Query failed to finish. Details: {'CreatedAt': datetime.datetime(2025, 3, 10, 0, 3, 46, 490000, tzinfo=tzlocal()), 'Database': 'dev', 'DbUser': 'IAM:dmml-assignment-user', 'Duration': -1, 'Error': 'ERROR: column reference "event_timestamp" is ambiguous', 'HasResultSet': False, 'Id': 'fafdf469-5fdc-47b6-84bf-0fc0b2f90c9d', 'QueryString': 'CREATE TEMPORARY TABLE _e20fc6f0531d4eae8eed8d07d71f1bc7 AS (\n/*\n Compute a deterministic hash for the `left_table_query_string` that will be used throughout\n all the logic as the field to GROUP BY the data\n*/\nWITH entity_dataframe AS (\n    SELECT *,\n        event_timestamp AS entity_timestamp\n        \n            \n            ,(\n                \n                    CAST(customerid as VARCHAR) ||\n                \n                CAST(event_timestamp AS VARCHAR)\n            ) AS customer_features__entity_row_unique_id\n            \n        \n    FROM feast_entity_df_3d944b6951c74ee2bd1f15ce14263e02\n),\n\n\n\ncustomer_features__entity_dataframe AS (\n    SELECT\n        customerid,\n        entity_timestamp,\n        customer_features__entity_row_unique_id\n    FROM entity_dataframe\n    GROUP BY\n        customerid,\n        entity_timestamp,\n        customer_features__entity_row_unique_id\n),\n\n/*\n This query template performs the point-in-time correctness join for a single feature set table\n to the provided entity table.\n\n 1. We first join the current feature_view to the entity dataframe that has been passed.\n This JOIN has the following logic:\n    - For each row of the entity dataframe, only keep the rows where the `timestamp_field`\n    is less than the one provided in the entity dataframe\n    - If there a TTL for the current feature_view, also keep the rows where the `timestamp_field`\n    is higher the the one provided minus the TTL\n    - For each row, Join on the entity key and retrieve the `entity_row_unique_id` that has been\n    computed previously\n\n The output of this CTE will contain all the necessary information and already filtered out most\n of the data that is not relevant.\n*/\n\ncustomer_features__subquery AS (\n    SELECT\n        event_timestamp as event_timestamp,\n        \n        customerid AS customerid,\n        \n            gender as gender, \n        \n            seniorcitizen as seniorcitizen, \n        \n            partner as partner, \n        \n            dependents as dependents, \n        \n            tenure as tenure, \n        \n            phoneservice as phoneservice, \n        \n            multiplelines as multiplelines, \n        \n            internetservice as internetservice, \n        \n            onlinesecurity as onlinesecurity, \n        \n            onlinebackup as onlinebackup, \n        \n            deviceprotection as deviceprotection, \n        \n            techsupport as techsupport, \n        \n            streamingtv as streamingtv, \n        \n            streamingmovies as streamingmovies, \n        \n            contract as contract, \n        \n            paperlessbilling as paperlessbilling, \n        \n            paymentmethod as paymentmethod, \n        \n            monthlycharges as monthlycharges, \n        \n            totalcharges as totalcharges, \n        \n            churn as churn, \n        \n            event_timestamp as event_timestamp\n        \n    FROM "public"."customer_warehouse"\n    WHERE event_timestamp <= \'2025-03-09T14:38:22\'\n    \n),\n\ncustomer_features__base AS (\n    SELECT\n        subquery.*,\n        entity_dataframe.entity_timestamp,\n        entity_dataframe.customer_features__entity_row_unique_id\n    FROM customer_features__subquery AS subquery\n    INNER JOIN customer_features__entity_dataframe AS entity_dataframe\n    ON TRUE\n        AND subquery.event_timestamp <= entity_dataframe.entity_timestamp\n\n        \n\n        \n        AND subquery.customerid = entity_dataframe.customerid\n        \n),\n\n/*\n 2. If the `created_timestamp_column` has been set, we need to\n deduplicate the data first. This is done by calculating the\n `MAX(created_at_timestamp)` for each event_timestamp.\n We then join the data on the next CTE\n*/\n\n\n/*\n 3. The data has been filtered during the first CTE "*__base"\n Thus we only need to compute the latest timestamp of each feature.\n*/\ncustomer_features__latest AS (\n    SELECT\n        event_timestamp,\n        \n        customer_features__entity_row_unique_id\n    FROM\n    (\n        SELECT *,\n            ROW_NUMBER() OVER(\n                PARTITION BY customer_features__entity_row_unique_id\n                ORDER BY event_timestamp DESC\n            ) AS row_number\n        FROM customer_features__base\n        \n    )\n    WHERE row_number = 1\n),\n\n/*\n 4. Once we know the latest value of each feature for a given timestamp,\n we can join again the data back to the original "base" dataset\n*/\ncustomer_features__cleaned AS (\n    SELECT base.*\n    FROM customer_features__base as base\n    INNER JOIN customer_features__latest\n    USING(\n        customer_features__entity_row_unique_id,\n        event_timestamp\n        \n    )\n)\n\n\n\n/*\n Joins the outputs of multiple time travel joins to a single table.\n The entity_dataframe dataset being our source of truth here.\n */\n\nSELECT customerid, event_timestamp, gender, seniorcitizen, partner, dependents, tenure, phoneservice, multiplelines, internetservice, onlinesecurity, onlinebackup, deviceprotection, techsupport, streamingtv, streamingmovies, contract, paperlessbilling, paymentmethod, monthlycharges, totalcharges, churn, event_timestamp\nFROM entity_dataframe\n\nLEFT JOIN (\n    SELECT\n        customer_features__entity_row_unique_id\n        \n            ,gender\n        \n            ,seniorcitizen\n        \n            ,partner\n        \n            ,dependents\n        \n            ,tenure\n        \n            ,phoneservice\n        \n            ,multiplelines\n        \n            ,internetservice\n        \n            ,onlinesecurity\n        \n            ,onlinebackup\n        \n            ,deviceprotection\n        \n            ,techsupport\n        \n            ,streamingtv\n        \n            ,streamingmovies\n        \n            ,contract\n        \n            ,paperlessbilling\n        \n            ,paymentmethod\n        \n            ,monthlycharges\n        \n            ,totalcharges\n        \n            ,churn\n        \n            ,event_timestamp\n        \n    FROM customer_features__cleaned\n) USING (customer_features__entity_row_unique_id)\n);\nUNLOAD (\'SELECT * FROM _e20fc6f0531d4eae8eed8d07d71f1bc7\') TO \'s3://dmml-assignment-bucket/parquet_datawarehouse//unload/865ca246-3458-42bd-8bf6-2a747d087b9b/\' IAM_ROLE \'\' FORMAT AS PARQUET', 'RedshiftPid': 1073873014, 'RedshiftQueryId': 0, 'ResultFormat': 'json', 'ResultRows': -1, 'ResultSize': -1, 'Status': 'FAILED', 'UpdatedAt': datetime.datetime(2025, 3, 10, 0, 3, 47, 280000, tzinfo=tzlocal()), 'WorkgroupName': 'my-redshift-workgroup', 'ResponseMetadata': {'RequestId': '3d36b3ef-368b-46b5-aa1d-28c9ab6d7f45', 'HTTPStatusCode': 200, 'HTTPHeaders': {'x-amzn-requestid': '3d36b3ef-368b-46b5-aa1d-28c9ab6d7f45', 'content-type': 'application/x-amz-json-1.1', 'content-length': '6868', 'date': 'Sun, 09 Mar 2025 18:33:48 GMT'}, 'RetryAttempts': 0}}
+2025-03-10 00:04:44,695 - INFO - Defining Feast entities and feature views.
+2025-03-10 00:04:44,698 - INFO - Feast feature definitions created successfully.
+2025-03-10 00:04:44,699 - INFO - Feast feature service created successfully.
+2025-03-10 00:04:44,699 - INFO - Initializing FeatureStore at 'G:\My Drive\DataScienceMtech\Sem2\DataManagementForMachineLearning\Assignment\end-to-end-data-management-pipeline\customer_churn_feast/feature_repo'
+2025-03-10 00:04:45,038 - INFO - FeatureStore initialized successfully.
+2025-03-10 00:04:45,039 - INFO - Registry cache expired, so refreshing
+2025-03-10 00:04:45,045 - INFO - Registry cache expired, so refreshing
+2025-03-10 00:04:45,050 - INFO - Registry cache expired, so refreshing
+2025-03-10 00:04:45,055 - INFO - Registry cache expired, so refreshing
+2025-03-10 00:04:45,061 - INFO - Registry cache expired, so refreshing
+2025-03-10 00:04:45,066 - INFO - Registry cache expired, so refreshing
+2025-03-10 00:04:45,070 - INFO - Registry cache expired, so refreshing
+2025-03-10 00:04:45,075 - INFO - Registry cache expired, so refreshing
+2025-03-10 00:04:45,080 - INFO - Registry cache expired, so refreshing
+2025-03-10 00:04:45,087 - INFO - Registry cache expired, so refreshing
+2025-03-10 00:04:45,091 - INFO - Registry cache expired, so refreshing
+2025-03-10 00:04:45,096 - INFO - Registry cache expired, so refreshing
+2025-03-10 00:04:45,101 - INFO - Registry cache expired, so refreshing
+2025-03-10 00:04:45,106 - INFO - Registry cache expired, so refreshing
+2025-03-10 00:04:45,111 - INFO - Registry cache expired, so refreshing
+2025-03-10 00:04:45,118 - INFO - Registry cache expired, so refreshing
+2025-03-10 00:04:45,125 - INFO - Registry cache expired, so refreshing
+2025-03-10 00:04:45,130 - INFO - Registry cache expired, so refreshing
+2025-03-10 00:04:45,137 - INFO - Registry cache expired, so refreshing
+2025-03-10 00:04:45,143 - INFO - Registry cache expired, so refreshing
+2025-03-10 00:04:45,148 - INFO - Registry cache expired, so refreshing
+2025-03-10 00:04:45,164 - INFO - Found credentials in shared credentials file: ~/.aws/credentials
+2025-03-10 00:05:23,630 - ERROR - Feature retrieval process failed: The entity dataframe you have provided must contain columns {'event_timestamp', 'customerid'}, but {'customerid'} were missing.
+2025-03-10 00:05:51,652 - INFO - Defining Feast entities and feature views.
+2025-03-10 00:05:51,656 - INFO - Feast feature definitions created successfully.
+2025-03-10 00:05:51,657 - INFO - Feast feature service created successfully.
+2025-03-10 00:05:51,657 - INFO - Initializing FeatureStore at 'G:\My Drive\DataScienceMtech\Sem2\DataManagementForMachineLearning\Assignment\end-to-end-data-management-pipeline\customer_churn_feast/feature_repo'
+2025-03-10 00:05:52,031 - INFO - FeatureStore initialized successfully.
+2025-03-10 00:05:52,031 - INFO - Registry cache expired, so refreshing
+2025-03-10 00:05:52,040 - INFO - Registry cache expired, so refreshing
+2025-03-10 00:05:52,047 - INFO - Registry cache expired, so refreshing
+2025-03-10 00:05:52,054 - INFO - Registry cache expired, so refreshing
+2025-03-10 00:05:52,059 - INFO - Registry cache expired, so refreshing
+2025-03-10 00:05:52,065 - INFO - Registry cache expired, so refreshing
+2025-03-10 00:05:52,070 - INFO - Registry cache expired, so refreshing
+2025-03-10 00:05:52,076 - INFO - Registry cache expired, so refreshing
+2025-03-10 00:05:52,082 - INFO - Registry cache expired, so refreshing
+2025-03-10 00:05:52,088 - INFO - Registry cache expired, so refreshing
+2025-03-10 00:05:52,093 - INFO - Registry cache expired, so refreshing
+2025-03-10 00:05:52,100 - INFO - Registry cache expired, so refreshing
+2025-03-10 00:05:52,105 - INFO - Registry cache expired, so refreshing
+2025-03-10 00:05:52,130 - INFO - Registry cache expired, so refreshing
+2025-03-10 00:05:52,139 - INFO - Registry cache expired, so refreshing
+2025-03-10 00:05:52,145 - INFO - Registry cache expired, so refreshing
+2025-03-10 00:05:52,153 - INFO - Registry cache expired, so refreshing
+2025-03-10 00:05:52,159 - INFO - Registry cache expired, so refreshing
+2025-03-10 00:05:52,166 - INFO - Registry cache expired, so refreshing
+2025-03-10 00:05:52,172 - INFO - Registry cache expired, so refreshing
+2025-03-10 00:05:52,178 - INFO - Registry cache expired, so refreshing
+2025-03-10 00:05:52,200 - INFO - Found credentials in shared credentials file: ~/.aws/credentials
+2025-03-10 00:06:03,232 - INFO - Registry cache expired, so refreshing
+2025-03-10 00:06:07,855 - ERROR - Feature retrieval process failed: Redshift SQL Query failed to finish. Details: {'CreatedAt': datetime.datetime(2025, 3, 10, 0, 6, 3, 806000, tzinfo=tzlocal()), 'Database': 'dev', 'DbUser': 'IAM:dmml-assignment-user', 'Duration': -1, 'Error': 'ERROR: column reference "event_timestamp" is ambiguous', 'HasResultSet': False, 'Id': '13f15532-173d-4f99-bdd1-d4c9a301d53b', 'QueryString': 'CREATE TEMPORARY TABLE _e84ba59b89dc404084d18b1254a2a2d0 AS (\n/*\n Compute a deterministic hash for the `left_table_query_string` that will be used throughout\n all the logic as the field to GROUP BY the data\n*/\nWITH entity_dataframe AS (\n    SELECT *,\n        event_timestamp AS entity_timestamp\n        \n            \n            ,(\n                \n                    CAST(customerid as VARCHAR) ||\n                \n                CAST(event_timestamp AS VARCHAR)\n            ) AS customer_features__entity_row_unique_id\n            \n        \n    FROM feast_entity_df_9a60d99ee23a453485c1b7697b596be4\n),\n\n\n\ncustomer_features__entity_dataframe AS (\n    SELECT\n        customerid,\n        entity_timestamp,\n        customer_features__entity_row_unique_id\n    FROM entity_dataframe\n    GROUP BY\n        customerid,\n        entity_timestamp,\n        customer_features__entity_row_unique_id\n),\n\n/*\n This query template performs the point-in-time correctness join for a single feature set table\n to the provided entity table.\n\n 1. We first join the current feature_view to the entity dataframe that has been passed.\n This JOIN has the following logic:\n    - For each row of the entity dataframe, only keep the rows where the `timestamp_field`\n    is less than the one provided in the entity dataframe\n    - If there a TTL for the current feature_view, also keep the rows where the `timestamp_field`\n    is higher the the one provided minus the TTL\n    - For each row, Join on the entity key and retrieve the `entity_row_unique_id` that has been\n    computed previously\n\n The output of this CTE will contain all the necessary information and already filtered out most\n of the data that is not relevant.\n*/\n\ncustomer_features__subquery AS (\n    SELECT\n        event_timestamp as event_timestamp,\n        \n        customerid AS customerid,\n        \n            gender as gender, \n        \n            seniorcitizen as seniorcitizen, \n        \n            partner as partner, \n        \n            dependents as dependents, \n        \n            tenure as tenure, \n        \n            phoneservice as phoneservice, \n        \n            multiplelines as multiplelines, \n        \n            internetservice as internetservice, \n        \n            onlinesecurity as onlinesecurity, \n        \n            onlinebackup as onlinebackup, \n        \n            deviceprotection as deviceprotection, \n        \n            techsupport as techsupport, \n        \n            streamingtv as streamingtv, \n        \n            streamingmovies as streamingmovies, \n        \n            contract as contract, \n        \n            paperlessbilling as paperlessbilling, \n        \n            paymentmethod as paymentmethod, \n        \n            monthlycharges as monthlycharges, \n        \n            totalcharges as totalcharges, \n        \n            churn as churn, \n        \n            event_timestamp as event_timestamp\n        \n    FROM "public"."customer_warehouse"\n    WHERE event_timestamp <= \'2025-03-09T14:38:22\'\n    \n),\n\ncustomer_features__base AS (\n    SELECT\n        subquery.*,\n        entity_dataframe.entity_timestamp,\n        entity_dataframe.customer_features__entity_row_unique_id\n    FROM customer_features__subquery AS subquery\n    INNER JOIN customer_features__entity_dataframe AS entity_dataframe\n    ON TRUE\n        AND subquery.event_timestamp <= entity_dataframe.entity_timestamp\n\n        \n\n        \n        AND subquery.customerid = entity_dataframe.customerid\n        \n),\n\n/*\n 2. If the `created_timestamp_column` has been set, we need to\n deduplicate the data first. This is done by calculating the\n `MAX(created_at_timestamp)` for each event_timestamp.\n We then join the data on the next CTE\n*/\n\n\n/*\n 3. The data has been filtered during the first CTE "*__base"\n Thus we only need to compute the latest timestamp of each feature.\n*/\ncustomer_features__latest AS (\n    SELECT\n        event_timestamp,\n        \n        customer_features__entity_row_unique_id\n    FROM\n    (\n        SELECT *,\n            ROW_NUMBER() OVER(\n                PARTITION BY customer_features__entity_row_unique_id\n                ORDER BY event_timestamp DESC\n            ) AS row_number\n        FROM customer_features__base\n        \n    )\n    WHERE row_number = 1\n),\n\n/*\n 4. Once we know the latest value of each feature for a given timestamp,\n we can join again the data back to the original "base" dataset\n*/\ncustomer_features__cleaned AS (\n    SELECT base.*\n    FROM customer_features__base as base\n    INNER JOIN customer_features__latest\n    USING(\n        customer_features__entity_row_unique_id,\n        event_timestamp\n        \n    )\n)\n\n\n\n/*\n Joins the outputs of multiple time travel joins to a single table.\n The entity_dataframe dataset being our source of truth here.\n */\n\nSELECT customerid, event_timestamp, gender, seniorcitizen, partner, dependents, tenure, phoneservice, multiplelines, internetservice, onlinesecurity, onlinebackup, deviceprotection, techsupport, streamingtv, streamingmovies, contract, paperlessbilling, paymentmethod, monthlycharges, totalcharges, churn, event_timestamp\nFROM entity_dataframe\n\nLEFT JOIN (\n    SELECT\n        customer_features__entity_row_unique_id\n        \n            ,gender\n        \n            ,seniorcitizen\n        \n            ,partner\n        \n            ,dependents\n        \n            ,tenure\n        \n            ,phoneservice\n        \n            ,multiplelines\n        \n            ,internetservice\n        \n            ,onlinesecurity\n        \n            ,onlinebackup\n        \n            ,deviceprotection\n        \n            ,techsupport\n        \n            ,streamingtv\n        \n            ,streamingmovies\n        \n            ,contract\n        \n            ,paperlessbilling\n        \n            ,paymentmethod\n        \n            ,monthlycharges\n        \n            ,totalcharges\n        \n            ,churn\n        \n            ,event_timestamp\n        \n    FROM customer_features__cleaned\n) USING (customer_features__entity_row_unique_id)\n);\nUNLOAD (\'SELECT * FROM _e84ba59b89dc404084d18b1254a2a2d0\') TO \'s3://dmml-assignment-bucket/parquet_datawarehouse//unload/3d5289ee-fb85-42a7-a7c7-39df90954057/\' IAM_ROLE \'\' FORMAT AS PARQUET', 'RedshiftPid': 1073905788, 'RedshiftQueryId': 0, 'ResultFormat': 'json', 'ResultRows': -1, 'ResultSize': -1, 'Status': 'FAILED', 'UpdatedAt': datetime.datetime(2025, 3, 10, 0, 6, 4, 635000, tzinfo=tzlocal()), 'WorkgroupName': 'my-redshift-workgroup', 'ResponseMetadata': {'RequestId': '05083ead-7a85-4011-bfc4-093e8513afbc', 'HTTPStatusCode': 200, 'HTTPHeaders': {'x-amzn-requestid': '05083ead-7a85-4011-bfc4-093e8513afbc', 'content-type': 'application/x-amz-json-1.1', 'content-length': '6870', 'date': 'Sun, 09 Mar 2025 18:36:05 GMT'}, 'RetryAttempts': 0}}
+2025-03-10 00:07:46,574 - INFO - Defining Feast entities and feature views.
+2025-03-10 00:07:46,579 - INFO - Feast feature definitions created successfully.
+2025-03-10 00:07:46,580 - INFO - Feast feature service created successfully.
+2025-03-10 00:07:46,580 - INFO - Initializing FeatureStore at 'G:\My Drive\DataScienceMtech\Sem2\DataManagementForMachineLearning\Assignment\end-to-end-data-management-pipeline\customer_churn_feast/feature_repo'
+2025-03-10 00:07:46,932 - INFO - FeatureStore initialized successfully.
+2025-03-10 00:07:46,933 - INFO - Registry cache expired, so refreshing
+2025-03-10 00:07:46,939 - INFO - Registry cache expired, so refreshing
+2025-03-10 00:07:46,945 - INFO - Registry cache expired, so refreshing
+2025-03-10 00:07:46,951 - INFO - Registry cache expired, so refreshing
+2025-03-10 00:07:46,956 - INFO - Registry cache expired, so refreshing
+2025-03-10 00:07:46,962 - INFO - Registry cache expired, so refreshing
+2025-03-10 00:07:46,968 - INFO - Registry cache expired, so refreshing
+2025-03-10 00:07:46,974 - INFO - Registry cache expired, so refreshing
+2025-03-10 00:07:46,979 - INFO - Registry cache expired, so refreshing
+2025-03-10 00:07:46,985 - INFO - Registry cache expired, so refreshing
+2025-03-10 00:07:46,992 - INFO - Registry cache expired, so refreshing
+2025-03-10 00:07:46,998 - INFO - Registry cache expired, so refreshing
+2025-03-10 00:07:47,005 - INFO - Registry cache expired, so refreshing
+2025-03-10 00:07:47,012 - INFO - Registry cache expired, so refreshing
+2025-03-10 00:07:47,018 - INFO - Registry cache expired, so refreshing
+2025-03-10 00:07:47,023 - INFO - Registry cache expired, so refreshing
+2025-03-10 00:07:47,030 - INFO - Registry cache expired, so refreshing
+2025-03-10 00:07:47,035 - INFO - Registry cache expired, so refreshing
+2025-03-10 00:07:47,042 - INFO - Registry cache expired, so refreshing
+2025-03-10 00:07:47,048 - INFO - Registry cache expired, so refreshing
+2025-03-10 00:07:47,066 - INFO - Found credentials in shared credentials file: ~/.aws/credentials
+2025-03-10 00:08:15,799 - INFO - Defining Feast entities and feature views.
+2025-03-10 00:08:15,799 - INFO - Feast feature definitions created successfully.
+2025-03-10 00:08:15,799 - INFO - Feast feature service created successfully.
+2025-03-10 00:08:15,799 - INFO - Initializing FeatureStore at 'G:\My Drive\DataScienceMtech\Sem2\DataManagementForMachineLearning\Assignment\end-to-end-data-management-pipeline\customer_churn_feast/feature_repo'
+2025-03-10 00:08:16,183 - INFO - FeatureStore initialized successfully.
+2025-03-10 00:08:16,183 - INFO - Registry cache expired, so refreshing
+2025-03-10 00:08:16,199 - INFO - Registry cache expired, so refreshing
+2025-03-10 00:08:16,199 - INFO - Registry cache expired, so refreshing
+2025-03-10 00:08:16,230 - INFO - Registry cache expired, so refreshing
+2025-03-10 00:08:16,246 - INFO - Registry cache expired, so refreshing
+2025-03-10 00:08:16,246 - INFO - Registry cache expired, so refreshing
+2025-03-10 00:08:16,262 - INFO - Registry cache expired, so refreshing
+2025-03-10 00:08:16,262 - INFO - Registry cache expired, so refreshing
+2025-03-10 00:08:16,277 - INFO - Registry cache expired, so refreshing
+2025-03-10 00:08:16,277 - INFO - Registry cache expired, so refreshing
+2025-03-10 00:08:16,277 - INFO - Registry cache expired, so refreshing
+2025-03-10 00:08:16,293 - INFO - Registry cache expired, so refreshing
+2025-03-10 00:08:16,293 - INFO - Registry cache expired, so refreshing
+2025-03-10 00:08:16,293 - INFO - Registry cache expired, so refreshing
+2025-03-10 00:08:16,309 - INFO - Registry cache expired, so refreshing
+2025-03-10 00:08:16,309 - INFO - Registry cache expired, so refreshing
+2025-03-10 00:08:16,320 - INFO - Registry cache expired, so refreshing
+2025-03-10 00:08:16,327 - INFO - Registry cache expired, so refreshing
+2025-03-10 00:08:16,327 - INFO - Registry cache expired, so refreshing
+2025-03-10 00:08:16,327 - INFO - Registry cache expired, so refreshing
+2025-03-10 00:08:16,352 - INFO - Found credentials in shared credentials file: ~/.aws/credentials
+2025-03-10 00:08:25,989 - INFO - Registry cache expired, so refreshing
+2025-03-10 00:09:11,569 - INFO - Feature retrieval completed successfully.
+2025-03-10 00:10:00,519 - INFO - Defining Feast entities and feature views.
+2025-03-10 00:10:00,523 - INFO - Feast feature definitions created successfully.
+2025-03-10 00:10:00,523 - INFO - Feast feature service created successfully.
+2025-03-10 00:10:00,524 - INFO - Initializing FeatureStore at 'G:\My Drive\DataScienceMtech\Sem2\DataManagementForMachineLearning\Assignment\end-to-end-data-management-pipeline\customer_churn_feast/feature_repo'
+2025-03-10 00:10:00,906 - INFO - FeatureStore initialized successfully.
+2025-03-10 00:10:00,907 - INFO - Registry cache expired, so refreshing
+2025-03-10 00:10:00,913 - INFO - Registry cache expired, so refreshing
+2025-03-10 00:10:00,917 - INFO - Registry cache expired, so refreshing
+2025-03-10 00:10:00,922 - INFO - Registry cache expired, so refreshing
+2025-03-10 00:10:00,929 - INFO - Registry cache expired, so refreshing
+2025-03-10 00:10:00,934 - INFO - Registry cache expired, so refreshing
+2025-03-10 00:10:00,939 - INFO - Registry cache expired, so refreshing
+2025-03-10 00:10:00,944 - INFO - Registry cache expired, so refreshing
+2025-03-10 00:10:00,950 - INFO - Registry cache expired, so refreshing
+2025-03-10 00:10:00,955 - INFO - Registry cache expired, so refreshing
+2025-03-10 00:10:00,960 - INFO - Registry cache expired, so refreshing
+2025-03-10 00:10:00,965 - INFO - Registry cache expired, so refreshing
+2025-03-10 00:10:00,970 - INFO - Registry cache expired, so refreshing
+2025-03-10 00:10:00,974 - INFO - Registry cache expired, so refreshing
+2025-03-10 00:10:00,981 - INFO - Registry cache expired, so refreshing
+2025-03-10 00:10:00,986 - INFO - Registry cache expired, so refreshing
+2025-03-10 00:10:00,991 - INFO - Registry cache expired, so refreshing
+2025-03-10 00:10:00,996 - INFO - Registry cache expired, so refreshing
+2025-03-10 00:10:01,003 - INFO - Registry cache expired, so refreshing
+2025-03-10 00:10:01,008 - INFO - Registry cache expired, so refreshing
+2025-03-10 00:10:01,025 - INFO - Found credentials in shared credentials file: ~/.aws/credentials
+2025-03-10 00:10:11,563 - INFO - Registry cache expired, so refreshing
+2025-03-10 00:10:29,903 - INFO - Offline features retrieved: 7043 rows.
+2025-03-10 00:10:29,903 - INFO - Feature retrieval completed successfully.
+2025-03-10 00:11:27,869 - INFO - Defining Feast entities and feature views.
+2025-03-10 00:11:27,873 - INFO - Feast feature definitions created successfully.
+2025-03-10 00:11:27,874 - INFO - Feast feature service created successfully.
+2025-03-10 00:11:27,874 - INFO - Initializing FeatureStore at 'G:\My Drive\DataScienceMtech\Sem2\DataManagementForMachineLearning\Assignment\end-to-end-data-management-pipeline\customer_churn_feast/feature_repo'
+2025-03-10 00:11:28,215 - INFO - FeatureStore initialized successfully.
+2025-03-10 00:11:28,215 - INFO - Registry cache expired, so refreshing
+2025-03-10 00:11:28,222 - INFO - Registry cache expired, so refreshing
+2025-03-10 00:11:28,227 - INFO - Registry cache expired, so refreshing
+2025-03-10 00:11:28,232 - INFO - Registry cache expired, so refreshing
+2025-03-10 00:11:28,238 - INFO - Registry cache expired, so refreshing
+2025-03-10 00:11:28,244 - INFO - Registry cache expired, so refreshing
+2025-03-10 00:11:28,249 - INFO - Registry cache expired, so refreshing
+2025-03-10 00:11:28,255 - INFO - Registry cache expired, so refreshing
+2025-03-10 00:11:28,259 - INFO - Registry cache expired, so refreshing
+2025-03-10 00:11:28,265 - INFO - Registry cache expired, so refreshing
+2025-03-10 00:11:28,271 - INFO - Registry cache expired, so refreshing
+2025-03-10 00:11:28,276 - INFO - Registry cache expired, so refreshing
+2025-03-10 00:11:28,281 - INFO - Registry cache expired, so refreshing
+2025-03-10 00:11:28,286 - INFO - Registry cache expired, so refreshing
+2025-03-10 00:11:28,291 - INFO - Registry cache expired, so refreshing
+2025-03-10 00:11:28,296 - INFO - Registry cache expired, so refreshing
+2025-03-10 00:11:28,301 - INFO - Registry cache expired, so refreshing
+2025-03-10 00:11:28,307 - INFO - Registry cache expired, so refreshing
+2025-03-10 00:11:28,313 - INFO - Registry cache expired, so refreshing
+2025-03-10 00:11:28,321 - INFO - Registry cache expired, so refreshing
+2025-03-10 00:11:28,339 - INFO - Found credentials in shared credentials file: ~/.aws/credentials
+2025-03-10 00:11:39,015 - INFO - Registry cache expired, so refreshing
+2025-03-10 00:11:53,779 - INFO - Offline features retrieved: 7043 rows.
+2025-03-10 00:11:53,832 - INFO - Offline features:
+   customerid     event_timestamp  gender  ...  monthlycharges totalcharges churn
+0  0572-ZJKLT 2024-08-11 14:38:22  Female  ...           99.65       4630.2    No
+1  5949-HGVJL 2024-07-13 14:38:22  Female  ...           73.05       1959.5    No
+2  6661-HBGWL 2024-07-08 14:38:22  Female  ...          104.75      4323.45   Yes
+3  5909-ECHUI 2024-07-03 14:38:22  Female  ...           56.25        56.25   Yes
+4  8709-KRDVL 2024-06-25 14:38:22  Female  ...          100.00       3320.6    No
+
+[5 rows x 22 columns]
+2025-03-10 00:11:53,833 - INFO - Feature retrieval completed successfully.
+2025-03-10 00:12:27,154 - INFO - Defining Feast entities and feature views.
+2025-03-10 00:12:27,157 - INFO - Feast feature definitions created successfully.
+2025-03-10 00:12:27,158 - INFO - Feast feature service created successfully.
+2025-03-10 00:12:27,158 - INFO - Initializing FeatureStore at 'G:\My Drive\DataScienceMtech\Sem2\DataManagementForMachineLearning\Assignment\end-to-end-data-management-pipeline\customer_churn_feast/feature_repo'
+2025-03-10 00:12:27,511 - INFO - FeatureStore initialized successfully.
+2025-03-10 00:12:27,511 - INFO - Fetching online features for customers: ['7729-JTEEC', '4909-JOUPP', '4657-FWVFY']
+2025-03-10 00:12:27,599 - INFO - Found credentials in shared credentials file: ~/.aws/credentials
+2025-03-10 00:12:28,992 - INFO - Online feature retrieval successful. Retrieved 3 rows.
+2025-03-10 00:12:29,000 - INFO - Online features:
+customerid totalcharges  tenure churn
+7729-JTEEC        90.05       2    No
+4909-JOUPP      7898.45      72    No
+4657-FWVFY       3915.4      40    No
+2025-03-10 00:12:29,001 - INFO - Registry cache expired, so refreshing
+2025-03-10 00:12:29,026 - INFO - Registry cache expired, so refreshing
+2025-03-10 00:12:29,036 - INFO - Registry cache expired, so refreshing
+2025-03-10 00:12:29,042 - INFO - Registry cache expired, so refreshing
+2025-03-10 00:12:29,047 - INFO - Registry cache expired, so refreshing
+2025-03-10 00:12:29,054 - INFO - Registry cache expired, so refreshing
+2025-03-10 00:12:29,060 - INFO - Registry cache expired, so refreshing
+2025-03-10 00:12:29,066 - INFO - Registry cache expired, so refreshing
+2025-03-10 00:12:29,071 - INFO - Registry cache expired, so refreshing
+2025-03-10 00:12:29,078 - INFO - Registry cache expired, so refreshing
+2025-03-10 00:12:29,083 - INFO - Registry cache expired, so refreshing
+2025-03-10 00:12:29,088 - INFO - Registry cache expired, so refreshing
+2025-03-10 00:12:29,093 - INFO - Registry cache expired, so refreshing
+2025-03-10 00:12:29,097 - INFO - Registry cache expired, so refreshing
+2025-03-10 00:12:29,103 - INFO - Registry cache expired, so refreshing
+2025-03-10 00:12:29,108 - INFO - Registry cache expired, so refreshing
+2025-03-10 00:12:29,113 - INFO - Registry cache expired, so refreshing
+2025-03-10 00:12:29,117 - INFO - Registry cache expired, so refreshing
+2025-03-10 00:12:29,122 - INFO - Registry cache expired, so refreshing
+2025-03-10 00:12:29,127 - INFO - Registry cache expired, so refreshing
+2025-03-10 00:12:39,434 - INFO - Registry cache expired, so refreshing
+2025-03-10 00:12:53,922 - INFO - Offline features retrieved: 7043 rows.
+2025-03-10 00:12:53,934 - INFO - Offline features:
+   customerid     event_timestamp  gender  ...  monthlycharges totalcharges churn
+0  5151-HQRDG 2009-03-12 14:38:22    Male  ...           55.05      2030.75    No
+1  0263-FJTQO 2009-03-08 14:38:22    Male  ...           70.50      3486.65    No
+2  1599-EAHXY 2009-02-09 14:38:22    Male  ...           23.95       1506.4    No
+3  2410-CIYFZ 2009-01-26 14:38:22    Male  ...           20.40         42.9    No
+4  4806-DXQCE 2016-01-11 14:38:22  Female  ...          113.65      7714.65    No
+
+[5 rows x 22 columns]
+2025-03-10 00:12:53,934 - INFO - Feature retrieval completed successfully.
