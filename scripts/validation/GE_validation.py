@@ -187,9 +187,25 @@ def validate_latest_file(source):
 
     validator.save_expectation_suite(discard_failed_expectations=False)
 
+    # Build Data Docs and retrieve URLs
     context.build_data_docs()
-    context.open_data_docs()
-    # Log only one line that validation is complete
+    docs_urls = context.get_docs_sites_urls()
+    print("Data Docs available at:")
+
+    if isinstance(docs_urls, dict):
+        url = docs_urls.get("site_url")
+        print(url)
+        logging.info(f"Data Docs available at: {url}")
+    elif isinstance(docs_urls, list):
+        # Assuming list items are dictionaries with a 'site_url' key:
+        for doc in docs_urls:
+            url = doc.get("site_url") if isinstance(doc, dict) else doc
+            print(url)
+            logging.info(f"Data Docs available at: {url}")
+    else:
+        print("Unexpected format for docs URLs:", docs_urls)
+        logging.info(f"Unexpected format for docs URLs: {docs_urls}")
+
     logging.info(f"Validation complete for {source} dataset. Data quality report generated.")
     print(f"Validation for {source} dataset completed and Data Docs built.")
 
