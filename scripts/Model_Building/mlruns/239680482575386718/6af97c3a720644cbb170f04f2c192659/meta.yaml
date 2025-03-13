@@ -1,0 +1,15 @@
+artifact_uri: file:///C:/Users/asood/PycharmProjects/EndtoEnd-data-management-pipeline/scripts/Model_Building/mlruns/239680482575386718/6af97c3a720644cbb170f04f2c192659/artifacts
+end_time: 1741700623011
+entry_point_name: ''
+experiment_id: '239680482575386718'
+lifecycle_stage: active
+run_id: 6af97c3a720644cbb170f04f2c192659
+run_name: righteous-turtle-961
+run_uuid: 6af97c3a720644cbb170f04f2c192659
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1741700616205
+status: 3
+tags: []
+user_id: asood

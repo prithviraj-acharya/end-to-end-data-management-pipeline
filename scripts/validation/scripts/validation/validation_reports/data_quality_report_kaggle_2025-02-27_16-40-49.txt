@@ -1,0 +1,2 @@
+total_charges_invalid_type: TotalCharges should be numeric. Some rows contain invalid values.
+invalid_total_charges: TotalCharges values are out of expected range.

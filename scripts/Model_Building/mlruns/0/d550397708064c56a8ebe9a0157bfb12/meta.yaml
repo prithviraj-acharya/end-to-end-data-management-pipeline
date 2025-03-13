@@ -1,0 +1,15 @@
+artifact_uri: file:///C:/Users/asood/PycharmProjects/EndtoEnd-data-management-pipeline/scripts/Model_Building/mlruns/0/d550397708064c56a8ebe9a0157bfb12/artifacts
+end_time: 1741699404744
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: d550397708064c56a8ebe9a0157bfb12
+run_name: awesome-asp-439
+run_uuid: d550397708064c56a8ebe9a0157bfb12
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1741699398245
+status: 3
+tags: []
+user_id: asood

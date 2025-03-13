@@ -1,0 +1,15 @@
+artifact_uri: file:///C:/Users/asood/PycharmProjects/EndtoEnd-data-management-pipeline/mlruns/661027883874513330/da5cbbc835294591a54592d17f0f751f/artifacts
+end_time: 1741701880324
+entry_point_name: ''
+experiment_id: '661027883874513330'
+lifecycle_stage: active
+run_id: da5cbbc835294591a54592d17f0f751f
+run_name: rare-gnat-892
+run_uuid: da5cbbc835294591a54592d17f0f751f
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1741701873486
+status: 3
+tags: []
+user_id: asood

@@ -2333,3 +2333,17 @@ KeyboardInterrupt
 2025-02-28 18:14:17,136 - INFO - Successfully loaded Kaggle and local datasets from S3.
 2025-02-28 18:14:28,755 - INFO - Datasets merged successfully. Merged dataset has 11249 rows and 21 columns.
 2025-02-28 18:14:32,489 - INFO - Merged file successfully uploaded to s3://dmml-assignment1-bucket/merged/20250228_181428/merged_churn_data.csv.
+2025-03-12 15:16:43,428 [INFO] Found credentials in shared credentials file: ~/.aws/credentials
+2025-03-12 15:16:50,502 [INFO] Validation complete for kaggle dataset. Data quality report generated.
+2025-03-12 15:16:54,507 [INFO] Validation complete for local dataset. Data quality report generated.
+2025-03-12 15:22:14,604 [INFO] Found credentials in shared credentials file: ~/.aws/credentials
+2025-03-12 15:24:18,737 [INFO] Found credentials in shared credentials file: ~/.aws/credentials
+2025-03-12 15:24:23,973 [INFO] Data Docs available at: {'site_name': 'local_site', 'site_url': 'file://C:\\Users\\asood\\PycharmProjects\\EndtoEnd-data-management-pipeline\\great_expectations\\uncommitted/data_docs/local_site/index.html'}
+2025-03-12 15:24:23,973 [INFO] Validation complete for kaggle dataset. Data quality report generated.
+2025-03-12 15:24:26,834 [INFO] Data Docs available at: {'site_name': 'local_site', 'site_url': 'file://C:\\Users\\asood\\PycharmProjects\\EndtoEnd-data-management-pipeline\\great_expectations\\uncommitted/data_docs/local_site/index.html'}
+2025-03-12 15:24:26,834 [INFO] Validation complete for local dataset. Data quality report generated.
+2025-03-12 15:30:00,127 [INFO] Found credentials in shared credentials file: ~/.aws/credentials
+2025-03-12 15:30:05,546 [INFO] Data Docs available at: file://C:\Users\asood\PycharmProjects\EndtoEnd-data-management-pipeline\great_expectations\uncommitted/data_docs/local_site/index.html
+2025-03-12 15:30:05,546 [INFO] Validation complete for kaggle dataset. Data quality report generated.
+2025-03-12 15:30:08,419 [INFO] Data Docs available at: file://C:\Users\asood\PycharmProjects\EndtoEnd-data-management-pipeline\great_expectations\uncommitted/data_docs/local_site/index.html
+2025-03-12 15:30:08,420 [INFO] Validation complete for local dataset. Data quality report generated.

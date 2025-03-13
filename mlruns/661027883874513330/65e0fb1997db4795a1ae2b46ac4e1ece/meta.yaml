@@ -1,0 +1,15 @@
+artifact_uri: file:///C:/Users/asood/PycharmProjects/EndtoEnd-data-management-pipeline/mlruns/661027883874513330/65e0fb1997db4795a1ae2b46ac4e1ece/artifacts
+end_time: 1741701873478
+entry_point_name: ''
+experiment_id: '661027883874513330'
+lifecycle_stage: active
+run_id: 65e0fb1997db4795a1ae2b46ac4e1ece
+run_name: merciful-sloth-830
+run_uuid: 65e0fb1997db4795a1ae2b46ac4e1ece
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1741701863162
+status: 3
+tags: []
+user_id: asood

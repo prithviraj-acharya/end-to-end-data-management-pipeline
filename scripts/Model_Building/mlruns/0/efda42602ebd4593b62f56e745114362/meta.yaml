@@ -1,0 +1,15 @@
+artifact_uri: file:///C:/Users/asood/PycharmProjects/EndtoEnd-data-management-pipeline/scripts/Model_Building/mlruns/0/efda42602ebd4593b62f56e745114362/artifacts
+end_time: 1741699026276
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: efda42602ebd4593b62f56e745114362
+run_name: sneaky-bat-759
+run_uuid: efda42602ebd4593b62f56e745114362
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1741699015923
+status: 3
+tags: []
+user_id: asood

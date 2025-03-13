@@ -1,0 +1,15 @@
+artifact_uri: file:///C:/Users/asood/PycharmProjects/EndtoEnd-data-management-pipeline/scripts/Model_Building/mlruns/239680482575386718/7c081b83cf824ca5bbba8dc5770f7535/artifacts
+end_time: 1741700616198
+entry_point_name: ''
+experiment_id: '239680482575386718'
+lifecycle_stage: active
+run_id: 7c081b83cf824ca5bbba8dc5770f7535
+run_name: lyrical-goat-473
+run_uuid: 7c081b83cf824ca5bbba8dc5770f7535
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1741700605706
+status: 3
+tags: []
+user_id: asood

@@ -1,0 +1,14 @@
+aliases: []
+creation_timestamp: 1741712096196
+current_stage: None
+description: null
+last_updated_timestamp: 1741712096196
+name: Churn_RFModel
+run_id: c224c43fca454b85935f530501081c63
+run_link: null
+source: file:///C:/Users/asood/PycharmProjects/EndtoEnd-data-management-pipeline/mlruns/850799800393933958/c224c43fca454b85935f530501081c63/artifacts/random_forest_model
+status: READY
+status_message: null
+storage_location: file:///C:/Users/asood/PycharmProjects/EndtoEnd-data-management-pipeline/mlruns/850799800393933958/c224c43fca454b85935f530501081c63/artifacts/random_forest_model
+user_id: null
+version: 2

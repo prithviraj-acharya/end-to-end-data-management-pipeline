@@ -1,0 +1,15 @@
+artifact_uri: file:///C:/Users/asood/PycharmProjects/EndtoEnd-data-management-pipeline/scripts/Model_Building/mlruns/0/a4ce8814d81b47cf8ece27aa204692f0/artifacts
+end_time: 1741700178690
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: a4ce8814d81b47cf8ece27aa204692f0
+run_name: blushing-foal-61
+run_uuid: a4ce8814d81b47cf8ece27aa204692f0
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1741700169279
+status: 3
+tags: []
+user_id: asood

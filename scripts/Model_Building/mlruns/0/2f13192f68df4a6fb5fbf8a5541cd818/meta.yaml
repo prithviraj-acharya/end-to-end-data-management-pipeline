@@ -1,0 +1,15 @@
+artifact_uri: file:///C:/Users/asood/PycharmProjects/EndtoEnd-data-management-pipeline/scripts/Model_Building/mlruns/0/2f13192f68df4a6fb5fbf8a5541cd818/artifacts
+end_time: 1741700169271
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: 2f13192f68df4a6fb5fbf8a5541cd818
+run_name: lyrical-pig-75
+run_uuid: 2f13192f68df4a6fb5fbf8a5541cd818
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1741700157554
+status: 3
+tags: []
+user_id: asood

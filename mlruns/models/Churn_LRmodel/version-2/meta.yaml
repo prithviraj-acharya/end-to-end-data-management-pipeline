@@ -1,0 +1,14 @@
+aliases: []
+creation_timestamp: 1741712088227
+current_stage: None
+description: null
+last_updated_timestamp: 1741712088227
+name: Churn_LRModel
+run_id: b40043091e9747b0a57439d6e38ea289
+run_link: null
+source: file:///C:/Users/asood/PycharmProjects/EndtoEnd-data-management-pipeline/mlruns/850799800393933958/b40043091e9747b0a57439d6e38ea289/artifacts/logistic_regression_model
+status: READY
+status_message: null
+storage_location: file:///C:/Users/asood/PycharmProjects/EndtoEnd-data-management-pipeline/mlruns/850799800393933958/b40043091e9747b0a57439d6e38ea289/artifacts/logistic_regression_model
+user_id: null
+version: 2

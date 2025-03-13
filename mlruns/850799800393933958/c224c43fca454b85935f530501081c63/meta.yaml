@@ -1,0 +1,15 @@
+artifact_uri: file:///C:/Users/asood/PycharmProjects/EndtoEnd-data-management-pipeline/mlruns/850799800393933958/c224c43fca454b85935f530501081c63/artifacts
+end_time: 1741712096212
+entry_point_name: ''
+experiment_id: '850799800393933958'
+lifecycle_stage: active
+run_id: c224c43fca454b85935f530501081c63
+run_name: RandomForest
+run_uuid: c224c43fca454b85935f530501081c63
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1741712088254
+status: 3
+tags: []
+user_id: asood

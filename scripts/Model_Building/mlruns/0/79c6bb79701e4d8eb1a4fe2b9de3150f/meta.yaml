@@ -1,0 +1,15 @@
+artifact_uri: file:///C:/Users/asood/PycharmProjects/EndtoEnd-data-management-pipeline/scripts/Model_Building/mlruns/0/79c6bb79701e4d8eb1a4fe2b9de3150f/artifacts
+end_time: 1741697747571
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: 79c6bb79701e4d8eb1a4fe2b9de3150f
+run_name: unique-shrimp-867
+run_uuid: 79c6bb79701e4d8eb1a4fe2b9de3150f
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1741697747498
+status: 3
+tags: []
+user_id: asood

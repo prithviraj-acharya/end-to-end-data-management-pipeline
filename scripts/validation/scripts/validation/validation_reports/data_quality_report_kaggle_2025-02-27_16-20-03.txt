@@ -1,0 +1,2 @@
+total_charges_invalid_type: TotalCharges should be numeric
+error: Error while validating Kaggle dataset: '<' not supported between instances of 'str' and 'int'

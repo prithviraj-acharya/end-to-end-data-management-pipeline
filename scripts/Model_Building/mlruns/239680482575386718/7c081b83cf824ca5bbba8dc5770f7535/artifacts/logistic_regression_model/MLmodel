@@ -1,0 +1,55 @@
+artifact_path: logistic_regression_model
+flavors:
+  python_function:
+    env:
+      conda: conda.yaml
+      virtualenv: python_env.yaml
+    loader_module: mlflow.sklearn
+    model_path: model.pkl
+    predict_fn: predict
+    python_version: 3.11.7
+  sklearn:
+    code: null
+    pickled_model: model.pkl
+    serialization_format: cloudpickle
+    sklearn_version: 1.2.2
+is_signature_from_type_hint: false
+mlflow_version: 2.20.3
+model_size_bytes: 3857
+model_uuid: b0d95f090d2f4b75a2b147738338e6e1
+run_id: 7c081b83cf824ca5bbba8dc5770f7535
+saved_input_example_info:
+  artifact_path: input_example.json
+  serving_input_path: serving_input_example.json
+  type: json_object
+signature:
+  inputs: '[{"type": "double", "name": "tenure", "required": true}, {"type": "double",
+    "name": "monthlycharges", "required": true}, {"type": "double", "name": "totalcharges",
+    "required": true}, {"type": "boolean", "name": "gender_male", "required": true},
+    {"type": "boolean", "name": "seniorcitizen_yes", "required": true}, {"type": "boolean",
+    "name": "partner_yes", "required": true}, {"type": "boolean", "name": "dependents_yes",
+    "required": true}, {"type": "boolean", "name": "phoneservice_yes", "required":
+    true}, {"type": "boolean", "name": "multiplelines_no_phone_service", "required":
+    true}, {"type": "boolean", "name": "multiplelines_yes", "required": true}, {"type":
+    "boolean", "name": "internetservice_fiber_optic", "required": true}, {"type":
+    "boolean", "name": "internetservice_no", "required": true}, {"type": "boolean",
+    "name": "onlinesecurity_no_internet_service", "required": true}, {"type": "boolean",
+    "name": "onlinesecurity_yes", "required": true}, {"type": "boolean", "name": "onlinebackup_no_internet_service",
+    "required": true}, {"type": "boolean", "name": "onlinebackup_yes", "required":
+    true}, {"type": "boolean", "name": "deviceprotection_no_internet_service", "required":
+    true}, {"type": "boolean", "name": "deviceprotection_yes", "required": true},
+    {"type": "boolean", "name": "techsupport_no_internet_service", "required": true},
+    {"type": "boolean", "name": "techsupport_yes", "required": true}, {"type": "boolean",
+    "name": "streamingtv_no_internet_service", "required": true}, {"type": "boolean",
+    "name": "streamingtv_yes", "required": true}, {"type": "boolean", "name": "streamingmovies_no_internet_service",
+    "required": true}, {"type": "boolean", "name": "streamingmovies_yes", "required":
+    true}, {"type": "boolean", "name": "contract_one_year", "required": true}, {"type":
+    "boolean", "name": "contract_two_year", "required": true}, {"type": "boolean",
+    "name": "paperlessbilling_yes", "required": true}, {"type": "boolean", "name":
+    "paymentmethod_credit_card_automatic", "required": true}, {"type": "boolean",
+    "name": "paymentmethod_electronic_check", "required": true}, {"type": "boolean",
+    "name": "paymentmethod_mailed_check", "required": true}]'
+  outputs: '[{"type": "integer", "required": true}]'
+  params: null
+type_hint_from_example: false
+utc_time_created: '2025-03-11 13:43:25.874265'

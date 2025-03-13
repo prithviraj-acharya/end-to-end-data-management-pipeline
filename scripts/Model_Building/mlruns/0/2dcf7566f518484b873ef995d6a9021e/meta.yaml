@@ -1,0 +1,15 @@
+artifact_uri: file:///C:/Users/asood/PycharmProjects/EndtoEnd-data-management-pipeline/scripts/Model_Building/mlruns/0/2dcf7566f518484b873ef995d6a9021e/artifacts
+end_time: 1741699398238
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: 2dcf7566f518484b873ef995d6a9021e
+run_name: resilient-dog-602
+run_uuid: 2dcf7566f518484b873ef995d6a9021e
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1741699389100
+status: 3
+tags: []
+user_id: asood

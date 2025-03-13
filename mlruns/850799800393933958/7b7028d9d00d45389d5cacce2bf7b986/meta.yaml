@@ -1,0 +1,15 @@
+artifact_uri: file:///C:/Users/asood/PycharmProjects/EndtoEnd-data-management-pipeline/mlruns/850799800393933958/7b7028d9d00d45389d5cacce2bf7b986/artifacts
+end_time: 1741725518664
+entry_point_name: ''
+experiment_id: '850799800393933958'
+lifecycle_stage: active
+run_id: 7b7028d9d00d45389d5cacce2bf7b986
+run_name: LogisticRegression
+run_uuid: 7b7028d9d00d45389d5cacce2bf7b986
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1741725499915
+status: 3
+tags: []
+user_id: asood

@@ -1,0 +1,15 @@
+artifact_uri: file:///C:/Users/asood/PycharmProjects/EndtoEnd-data-management-pipeline/scripts/Model_Building/mlruns/0/6eb4d62544804eea879dd413a5ef0cd3/artifacts
+end_time: 1741698127457
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: 6eb4d62544804eea879dd413a5ef0cd3
+run_name: able-fish-930
+run_uuid: 6eb4d62544804eea879dd413a5ef0cd3
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1741698127423
+status: 3
+tags: []
+user_id: asood

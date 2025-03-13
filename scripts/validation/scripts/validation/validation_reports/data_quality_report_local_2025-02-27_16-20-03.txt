@@ -1,0 +1,12 @@
+missing_data: gender             1000
+SeniorCitizen      1000
+Partner            1000
+Dependents         1000
+tenure             1000
+PhoneService       1000
+MultipleLines      1000
+InternetService    1000
+OnlineSecurity     1000
+OnlineBackup       1000
+invalid_gender: gender column has unexpected values.
+invalid_phone_service: PhoneService column has unexpected values.

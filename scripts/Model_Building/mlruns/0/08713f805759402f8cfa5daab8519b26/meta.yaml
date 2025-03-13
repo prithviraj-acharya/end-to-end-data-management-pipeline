@@ -1,0 +1,15 @@
+artifact_uri: file:///C:/Users/asood/PycharmProjects/EndtoEnd-data-management-pipeline/scripts/Model_Building/mlruns/0/08713f805759402f8cfa5daab8519b26/artifacts
+end_time: 1741698907452
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: 08713f805759402f8cfa5daab8519b26
+run_name: stately-fish-38
+run_uuid: 08713f805759402f8cfa5daab8519b26
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1741698907305
+status: 3
+tags: []
+user_id: asood
