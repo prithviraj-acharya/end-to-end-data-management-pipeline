@@ -1,0 +1,14 @@
+aliases: []
+creation_timestamp: 1741902175292
+current_stage: None
+description: null
+last_updated_timestamp: 1741902175292
+name: Churn_RFModel
+run_id: db617132833b440697206a1c8a546a45
+run_link: null
+source: file:\\\C:\Users\gaura\Downloads\Sem_II\DM4ML\Assignment\end-to-end-data-management-pipeline\mlruns/756599980419897778/db617132833b440697206a1c8a546a45/artifacts/random_forest_model
+status: READY
+status_message: null
+storage_location: file:\\\C:\Users\gaura\Downloads\Sem_II\DM4ML\Assignment\end-to-end-data-management-pipeline\mlruns/756599980419897778/db617132833b440697206a1c8a546a45/artifacts/random_forest_model
+user_id: null
+version: 1

@@ -1,0 +1,14 @@
+aliases: []
+creation_timestamp: 1741902167383
+current_stage: None
+description: null
+last_updated_timestamp: 1741902167383
+name: Churn_LRModel
+run_id: 7c9d6ef5dcd446459d6abd32845d58aa
+run_link: null
+source: file:\\\C:\Users\gaura\Downloads\Sem_II\DM4ML\Assignment\end-to-end-data-management-pipeline\mlruns/756599980419897778/7c9d6ef5dcd446459d6abd32845d58aa/artifacts/logistic_regression_model
+status: READY
+status_message: null
+storage_location: file:\\\C:\Users\gaura\Downloads\Sem_II\DM4ML\Assignment\end-to-end-data-management-pipeline\mlruns/756599980419897778/7c9d6ef5dcd446459d6abd32845d58aa/artifacts/logistic_regression_model
+user_id: null
+version: 1

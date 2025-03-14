@@ -1,0 +1,20 @@
+project: customer_churn_feast
+# By default, the registry is a file (but can be turned into a more scalable SQL-backed registry)
+registry: data/registry.db
+# The provider primarily specifies default offline / online stores & storing the registry in a given cloud
+provider: aws
+online_store:
+    type: dynamodb
+    region: ap-south-1
+offline_store:
+    type: redshift
+    region: ap-south-1
+    workgroup: dm4ml-assign-redshift-serverless-workgroup
+    database: dev
+    user: admin
+    s3_staging_location: s3://dmml-assign1-gauravp/
+    iam_role: arn:aws:iam::302263061356:role/RedshiftS3AccessRole
+entity_key_serialization_version: 2
+# By default, no_auth for authentication and authorization, other possible values kubernetes and oidc. Refer the documentation for more details.
+auth:
+    type: no_auth
