@@ -48,7 +48,7 @@ redshift_endpoint = creds["aws"]["redshift_endpoint"]
 s3_client, aws_s3_bucket_name, contetnt_present_flag = connect_to_s3()
 
 def get_latest_s3_object(prefix):
-    print(f"Listing objects in bucket: {aws_s3_bucket_name} with prefix: {prefix}")
+    logger.info(f"Listing objects in bucket: {aws_s3_bucket_name} with prefix: {prefix}")
     response = s3_client.list_objects_v2(Bucket=aws_s3_bucket_name, Prefix=prefix)
     objects = response.get("Contents", [])
     if not objects:
@@ -59,10 +59,10 @@ def get_latest_s3_object(prefix):
 # ------------------ STEP 1: LOAD THE LATEST MERGED FILE FROM S3 ------------------
 try:
 
-    print("Here 2")
+    logger.info("Here 2")
     latest_transformed_key = get_latest_s3_object("transformed/")
     s3_transformed_path=f"s3://{aws_s3_bucket_name}/{latest_transformed_key}"
-    print(f"Latest transformed file for loading: {s3_transformed_path}")
+    logger.info(f"Latest transformed file for loading: {s3_transformed_path}")
 
 
     # ------------------ NEW ADDITION: READ BACK THE UPLOADED PARQUET FILE AND VALIDATE ------------------
@@ -77,17 +77,17 @@ try:
     table_uploaded = pq.read_table(BytesIO(parquet_data_uploaded))
     df = table_uploaded.to_pandas()
     
-    # Print the head of the DataFrame to validate the upload
-    print("\nHead of the uploaded DataFrame from Parquet file:")
-    print(df.head())
+    # logger.info the head of the DataFrame to validate the upload
+    logger.info("\nHead of the uploaded DataFrame from Parquet file:")
+    logger.info(df.head())
 
     # Block for reading csv format file
     #obj_transformed = s3_client.get_object(Bucket=aws_s3_bucket_name, Key=latest_transformed_key)
     #df = pd.read_csv(StringIO(obj_transformed['Body'].read().decode('utf-8')))
     #df = pd.read_parquet(s3_transformed_path, engine='pyarrow')
-    #print(df.head())
+    #logger.info(df.head())
 except Exception as e:
-    print(f"Error loading transformed file from S3: {e}")
+    logger.info(f"Error loading transformed file from S3: {e}")
     raise
 
 # ----------------- Function to map pandas data types to Redshift data types -------------------
@@ -124,8 +124,15 @@ def load_parquet_to_redshift_serverless(redshift_endpoint,redshift_port,redshift
         )
         redshift_cursor=redshift_conn.cursor()
 
-        print(f"redshift_conn - {redshift_conn}")
-        
+        logger.info(f"redshift_conn - {redshift_conn}")
+
+        drop_query = f"DROP TABLE IF EXISTS {schema_name}.{table_name};"
+        logger.info(f"Drop Table Query: {drop_query}")
+        redshift_cursor.execute(drop_query)
+        redshift_conn.commit()
+
+        logger.info("Table dropped successfully")
+
         # Create table (if it doesn't exists)
         select_query=f"""
             SELECT *
@@ -134,28 +141,28 @@ def load_parquet_to_redshift_serverless(redshift_endpoint,redshift_port,redshift
             AND table_schema = '{schema_name}'
             AND table_name = '{table_name}';
         """
-        print(f"select query = {select_query}")
+        logger.info(f"select query = {select_query}")
         redshift_cursor.execute(select_query)
         result = redshift_cursor.fetchall()
-        print(f"Result = {result}")
+        logger.info(f"Result = {result}")
 
         if not result:
             # Create table dynamically based on DataFrame schema
             columns = ", ".join([f"{col} {map_dtype_to_redshift(df[col].dtype)}" for col, dtype in zip(df.columns, df.dtypes)])
-            
+
             # Create table query
             create_table_query = f"""
             CREATE TABLE IF NOT EXISTS {schema_name}.{table_name} (
                 {columns}
             );
             """
-            print(f"Create Table Query: {create_table_query}")
+            logger.info(f"Create Table Query: {create_table_query}")
             redshift_cursor.execute(create_table_query)
             redshift_conn.commit()
 
-            print("Table created successfully")
+            logger.info("Table created successfully")
         else:
-            print(f"Table '{table_name}' already exists. Skipping table creation.")
+            logger.info(f"Table '{table_name}' already exists. Skipping table creation.")
 
         
         # Prepare COPY command to load the data into Redshift
@@ -165,11 +172,11 @@ def load_parquet_to_redshift_serverless(redshift_endpoint,redshift_port,redshift
         IAM_ROLE '{iam_role_arn}'
         FORMAT AS PARQUET;
         """
-        print(f"COPY Command: {copy_command}")
+        logger.info(f"COPY Command: {copy_command}")
         redshift_cursor.execute(copy_command)
         redshift_conn.commit()
 
-        print("Data loaded into Redshift successfully!")
+        logger.info("Data loaded into Redshift successfully!")
         
         # Step 3: Add the audit columns to the table if not already present
         alter_table_query = f"""
@@ -178,22 +185,22 @@ def load_parquet_to_redshift_serverless(redshift_endpoint,redshift_port,redshift
         """
         redshift_cursor.execute(alter_table_query)
         redshift_conn.commit()
-        print("Audit columns added to Redshift table.")
+        logger.info("Audit columns added to Redshift table.")
 
         # Step 4: Update the audit columns with proper values
         update_query = f"""
         UPDATE {schema_name}.{table_name}
-        SET event_timestamp = current_timestamp,
-            created_timestamp = current_timestamp;
+        SET event_timestamp = current_timestamp;
         """
+        logger.info(f"Update query: {update_query}")
         redshift_cursor.execute(update_query)
         redshift_conn.commit()
 
-        print("Audit columns updated with current timestamps.")
+        logger.info("Audit columns updated with current timestamps.")
 
 
     except psycopg2.Error as e:
-        print(f"Error: {e}")
+        logger.info(f"Error: {e}")
     finally:
         if redshift_conn:
             redshift_cursor.close()

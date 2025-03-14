@@ -1,14 +1,18 @@
+import subprocess
+import sys
+subprocess.run([sys.executable, "-m", "pip", "install", "-r", "requirements_mlFlow.txt"])
+
 import pandas as pd
 from sklearn.model_selection import train_test_split
 from sklearn.linear_model import LogisticRegression
 from sklearn.ensemble import RandomForestClassifier
 from sklearn.metrics import accuracy_score, precision_score, recall_score, f1_score
 from sklearn.preprocessing import LabelEncoder
-import sys
 import os
 import mlflow
 import mlflow.sklearn
 from feast import FeatureStore
+
 
 # ------------------ SETUP ------------------
 project_root = os.path.abspath(os.path.join(os.path.dirname(__file__), '..', '..', 'src'))
@@ -17,18 +21,16 @@ current_dir = os.path.dirname(os.path.abspath(__file__))
 from logger import setup_logging
 from utils import connect_to_s3
 from exception import CustomException
-artifacts_mlruns_path = os.path.join(project_root, "artifacts", "mlruns")
-print(f"artifacts_mlruns_path - {artifacts_mlruns_path}")
 # Ensure the logs folder exists
 logger = setup_logging("Models_MLflow")
 
 # -------------------------------------------------------------------
 # 1. MLflow Setup
 # -------------------------------------------------------------------
-#mlflow.set_tracking_uri(artifacts_mlruns_path)
-mlflow.set_tracking_uri(r"file:\\\C:\Users\gaura\Downloads\Sem_II\DM4ML\Assignment\end-to-end-data-management-pipeline\mlruns")
 
-
+# mlflow.set_tracking_uri(os.path.join(os.path.abspath(os.path.join(os.path.dirname(__file__), '..', '..')), "mlruns"))
+mlflow.set_tracking_uri("file:./mlflow_runs")
+logger.info(mlflow.get_tracking_uri())
 
 experiment_name = "Churn_Prediction_Experiments"
 experiment = mlflow.get_experiment_by_name(experiment_name)
@@ -128,7 +130,7 @@ input_example = X_test.iloc[0].to_dict()
 # 3. Logistic Regression: Train, Log, and Register
 # -------------------------------------------------------------------
 with mlflow.start_run(run_name="LogisticRegression"):
-    print(f"Active run_id: {mlflow.active_run().info.run_id}")
+    logger.info(f"Active run_id: {mlflow.active_run().info.run_id}")
 
     # Train the model
     lr_model = LogisticRegression(max_iter=1000, class_weight='balanced')
@@ -164,13 +166,13 @@ with mlflow.start_run(run_name="LogisticRegression"):
     # This will create a new version each time this code runs
     result = mlflow.register_model(model_uri, lr_model_name)
 
-    print(f"Registered {lr_model_name} with version: {result.version}")
+    logger.info(f"Registered {lr_model_name} with version: {result.version}")
 
 # -------------------------------------------------------------------
 # 4. Random Forest: Train, Log, and Register
 # -------------------------------------------------------------------
 with mlflow.start_run(run_name="RandomForest"):
-    print(f"Active run_id: {mlflow.active_run().info.run_id}")
+    logger.info(f"Active run_id: {mlflow.active_run().info.run_id}")
 
     # Train the model
     rf_model = RandomForestClassifier(n_estimators=100, random_state=42, class_weight='balanced')
@@ -205,13 +207,16 @@ with mlflow.start_run(run_name="RandomForest"):
     # Register the model in the Model Registry
     result = mlflow.register_model(model_uri, rf_model_name)
 
-    print(f"Registered {rf_model_name} with version: {result.version}")
+    logger.info(f"Registered {rf_model_name} with version: {result.version}")
 
 # -------------------------------------------------------------------
 # 5. Print Metrics for Quick Reference
 # -------------------------------------------------------------------
-print("\n=== Final Metrics ===")
-print(f"Logistic Regression -> Accuracy: {lr_accuracy:.4f}, "
+logger.info("\n=== Final Metrics ===")
+logger.info(f"Logistic Regression -> Accuracy: {lr_accuracy:.4f}, "
       f"Precision: {lr_precision:.4f}, Recall: {lr_recall:.4f}, F1 Score: {lr_f1:.4f}")
-print(f"Random Forest -> Accuracy: {rf_accuracy:.4f}, "
+logger.info(f"Random Forest -> Accuracy: {rf_accuracy:.4f}, "
       f"Precision: {rf_precision:.4f}, Recall: {rf_recall:.4f}, F1 Score: {rf_f1:.4f}")
+
+
+# subprocess.Popen(["mlflow", "ui", "--backend-store-uri", "file:///Users/lizapersonal/PycharmProjects/data-management-pipeline/mlflow_run"])

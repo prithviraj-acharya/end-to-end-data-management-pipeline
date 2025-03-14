@@ -18,7 +18,7 @@ logger = setup_logging("feast_apply")
 
 try:
     # Define FeatureStore repo path
-    repo_path = os.path.join(project_root, "..", "customer_churn_feast/feature_repo")
+    repo_path = os.path.join(os.path.abspath(os.path.join(os.path.dirname(__file__), '..', '..', '..')), "customer_churn_feast/feature_repo")
     print(f"repo_Path - {repo_path}")
     logger.info(f"Initializing FeatureStore at '{repo_path}'")
 

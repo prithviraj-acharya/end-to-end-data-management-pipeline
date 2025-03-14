@@ -1,20 +1,24 @@
+import subprocess
+import sys
+
+subprocess.run([sys.executable, "-m", "pip", "freeze", "|", "xargs", "pip" "uninstall" "-y"])
+subprocess.run([sys.executable, "-m", "pip", "install", "-r", "requirements.txt"])
+
 import os
 import yaml
 import boto3
-import logging
 import warnings
 import sys
 import great_expectations as ge
 from great_expectations.core.batch import RuntimeBatchRequest
 from datetime import datetime
 from great_expectations.validator.metric_configuration import MetricConfiguration
-import subprocess
 
 # ------------------ SETUP ------------------
 project_root = os.path.abspath(os.path.join(os.path.dirname(__file__), '..', '..', 'src'))
 sys.path.append(project_root)
 current_dir = os.path.dirname(os.path.abspath(__file__))
-print(f"project_root - {project_root}")
+
 from exception import CustomException
 from logger import setup_logging
 from utils import connect_to_s3
@@ -22,14 +26,14 @@ from utils import connect_to_s3
 # Define the path to the bash script and requirements file
 """bash_script_path = os.path.abspath(os.path.join(os.path.dirname(__file__), '..', '..', 'src', 'components'))
 bash_script_path = bash_script_path.replace("\\", "/")
-print(f"bash_script_path - {bash_script_path}")
+logger.info(f"bash_script_path - {bash_script_path}")
 bash_script = "set_specific_venv.sh"
 requirements_file_with_GE = "requirements_with_GE.txt"
 requirements_file_without_GE = "requirements_without_GE.txt"
 
 # Full path to the bash script
 full_bash_script_path = f"{bash_script_path}/{bash_script}"
-print(f"full_bash_script_path - {full_bash_script_path}")
+logger.info(f"full_bash_script_path - {full_bash_script_path}")
 # Run the bash script with the requirements file as an argument
 subprocess.run(["bash", full_bash_script_path, requirements_file_with_GE])
 """
@@ -40,10 +44,6 @@ logger = setup_logging("validation_GE")
 
 # Suppress python warnings (e.g. DeprecationWarnings)
 warnings.filterwarnings("ignore")
-
-# Reduce Great Expectations logger level so that only errors appear
-ge_logger = logging.getLogger("great_expectations")
-ge_logger.setLevel(logging.ERROR)
 
 # Initialize GE Data Context (assumes GE project is already set up)
 context = ge.get_context()
@@ -114,6 +114,8 @@ def get_latest_s3_object(base_prefix):
 # ------------------ VALIDATION FUNCTION ------------------
 
 def validate_latest_file(source):
+    logger.info(f"Starting GE validation with {source}")
+
     if source == "kaggle":
         base_prefix = "data/raw/kaggle/"
         suite_name = "customer_churn_suite_kaggle"
@@ -125,16 +127,16 @@ def validate_latest_file(source):
 
     s3_bucket_name, key = get_latest_s3_object(base_prefix)
     s3_file_path = f"s3://{s3_bucket_name}/{key}"
-    print(f"Latest {source} file: {s3_file_path}")
+    logger.info(f"Latest {source} file: {s3_file_path}")
 
     runtime_params = {"path": s3_file_path}
 
-    print(f"runtime_params: {runtime_params}")
+    logger.info(f"runtime_params: {runtime_params}")
 
     if source == "kaggle":
         runtime_params["reader_options"] = {"skipinitialspace": True}
 
-    print("Setting batch_request")
+    logger.info("Setting batch_request")
 
     batch_request = RuntimeBatchRequest(
         datasource_name="my_s3_datasource",
@@ -144,7 +146,7 @@ def validate_latest_file(source):
         batch_identifiers={"default_identifier_name": "default_batch"}
     )
 
-    print(f"batch_request: {batch_request}")
+    logger.info(f"batch_request: {batch_request}")
 
     context.create_expectation_suite(expectation_suite_name=suite_name, overwrite_existing=True)
 
@@ -159,7 +161,7 @@ def validate_latest_file(source):
         metric_value_kwargs={}
     )
     actual_columns = validator.get_metric(metric=columns_metric)
-    print(f"Detected columns in {source} data: {actual_columns}")
+    logger.info(f"Detected columns in {source} data: {actual_columns}")
 
     # Add core expectations
     if source == "kaggle":
@@ -168,8 +170,8 @@ def validate_latest_file(source):
         add_local_expectations(validator)
 
     results = validator.validate()
-    print(f"Validation results for {source} dataset:")
-    print(results)
+    logger.info(f"Validation results for {source} dataset:")
+    logger.info(results)
 
     row_count_metric = MetricConfiguration(
         metric_name="table.row_count",
@@ -187,34 +189,34 @@ def validate_latest_file(source):
         )
         missing_counts[col] = validator.get_metric(metric=missing_metric)
 
-    print("Total row count:", row_count)
-    print("Missing values per column:")
+    logger.info(f"Total row count: {row_count}")
+    logger.info("Missing values per column:")
     for col, missing in missing_counts.items():
-        print(f"  {col}: {missing}")
+        logger.info(f"  {col}: {missing}")
 
     validator.save_expectation_suite(discard_failed_expectations=False)
 
     # Build Data Docs and retrieve URLs
     context.build_data_docs()
     docs_urls = context.get_docs_sites_urls()
-    print("Data Docs available at:")
+    logger.info("Data Docs available at:")
 
     if isinstance(docs_urls, dict):
         url = docs_urls.get("site_url")
-        print(url)
-        logging.info(f"Data Docs available at: {url}")
+        logger.info(url)
+        logger.info(f"Data Docs available at: {url}")
     elif isinstance(docs_urls, list):
         # Assuming list items are dictionaries with a 'site_url' key:
         for doc in docs_urls:
             url = doc.get("site_url") if isinstance(doc, dict) else doc
-            print(url)
-            logging.info(f"Data Docs available at: {url}")
+            logger.info(url)
+            logger.info(f"Data Docs available at: {url}")
     else:
-        print("Unexpected format for docs URLs:", docs_urls)
-        logging.info(f"Unexpected format for docs URLs: {docs_urls}")
+        logger.info("Unexpected format for docs URLs:", docs_urls)
+        logger.info(f"Unexpected format for docs URLs: {docs_urls}")
 
-    logging.info(f"Validation complete for {source} dataset. Data quality report generated.")
-    print(f"Validation for {source} dataset completed and Data Docs built.")
+    logger.info(f"Validation complete for {source} dataset. Data quality report generated.")
+    logger.info(f"Validation for {source} dataset completed and Data Docs built.")
 
 
 
@@ -229,4 +231,4 @@ if __name__ == "__main__":
     main()
 
     # Run the bash script with the requirements file as an argument
-    subprocess.run(["bash", bash_script, requirements_file_without_GE])
+    # subprocess.run(["bash", bash_script, requirements_file_without_GE])

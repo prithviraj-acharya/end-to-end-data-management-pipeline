@@ -119,7 +119,9 @@ def write_csv(rows, cursor, file_path, file_name):
 
         with open(csv_file, "w", newline="") as file:
             writer = csv.writer(file)
-            column_names = [desc[0] for desc in cursor.description]
+            # column_names = [desc[0] for desc in cursor.description]
+            column_names = ["customerID", "gender", "SeniorCitizen", "Partner", "Dependents", "tenure", "PhoneService",
+                            "MultipleLines", "InternetService", "OnlineSecurity", "OnlineBackup", "Churn"]
             writer.writerow(column_names)
             writer.writerows(rows)
     except Exception as e:
@@ -128,7 +130,7 @@ def write_csv(rows, cursor, file_path, file_name):
 def connect_rds_to_pull_csv(local_file_path, file_name):
     try:
         #load_dotenv(r"C:\Users\gaura\Downloads\Sem_II\DM4ML\Assignment\end-to-end-data-management-pipeline\.env")
-        load_dotenv(os.path.abspath(os.path.join(os.path.dirname(__file__), ".env")))
+        load_dotenv()
         #print(f"load dotenv - {os.path.abspath(os.path.join(os.path.dirname(__file__), '..', '..', '.env'))}")
         conn = pg8000.connect(
             #database="dmml_db", #os.getenv("DB_NAME"),

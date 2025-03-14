@@ -118,10 +118,10 @@ logger.info(f"EDA plots saved in: {plots_dir}")
 df_proc = df.copy()
 
 # Drop the identifier column "customerID" (we drop it here before encoding)
-if "customerID" in df_proc.columns:
-    df_proc = df_proc.drop(columns=["customerID"])
-    print("Dropped customerID column.")
-    logger.info("Dropped customerID column.")
+# if "customerID" in df_proc.columns:
+#     df_proc = df_proc.drop(columns=["customerID"])
+#     print("Dropped customerID column.")
+#     logger.info("Dropped customerID column.")
 
 # Separate numeric and categorical columns.
 numeric_cols = df_proc.select_dtypes(include=[np.number]).columns.tolist()
@@ -131,6 +131,9 @@ categorical_cols = df_proc.select_dtypes(include=["object", "category"]).columns
 if "Churn" in categorical_cols:
     categorical_cols.remove("Churn")
 
+if "customerID" in categorical_cols:
+    categorical_cols.remove("customerID")
+
 # (Assuming missing values are already imputed from previous steps; if not, fill them here.)
 for col in numeric_cols:
     if df_proc[col].isnull().sum() > 0:
@@ -139,24 +142,19 @@ for col in categorical_cols:
     if df_proc[col].isnull().sum() > 0:
         df_proc[col].fillna(df_proc[col].mode()[0], inplace=True)
 
+# Scale numeric columns (excluding Churn if it's in numeric)
+if "Churn" in numeric_cols:
+    numeric_cols.remove("Churn")
+
+
 # Standardize (normalize) numeric attributes.
 scaler = StandardScaler()
 df_proc[numeric_cols] = scaler.fit_transform(df_proc[numeric_cols])
 
-# One-hot encode all categorical variables except "Partner".
-# Remove "Partner" temporarily from the categorical list.
-partner_exists = False
-if "Partner" in categorical_cols:
-    categorical_cols.remove("Partner")
-    partner_exists = True
-
 df_proc = pd.get_dummies(df_proc, columns=categorical_cols, drop_first=True)
-
-# Now, for the "Partner" column, perform label encoding (if it exists in the original df).
-if partner_exists and "Partner" in df.columns:
-    le = LabelEncoder()
-    # Create a new column for the label encoding.
-    df_proc["Partner_label"] = le.fit_transform(df["Partner"].fillna("Missing"))
+df_proc.columns = df_proc.columns.str.replace(" ", "_", regex=True)
+df_proc.rename(columns={"PaymentMethod_Credit_card_(automatic)": "PaymentMethod_Credit_card_automatic"}, inplace=True)
+df_proc.columns = df_proc.columns.str.lower()
 
 print("Data preprocessing (cleaning, scaling, encoding) completed.")
 logger.info("Data preprocessing (cleaning, scaling, encoding) completed.")

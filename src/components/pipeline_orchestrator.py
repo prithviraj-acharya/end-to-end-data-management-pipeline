@@ -3,6 +3,8 @@ import os
 import sys
 import subprocess
 
+# subprocess.run([sys.executable, "-m", "pip", "install", "-r", "requirements_mlFlow.txt"])
+
 # ------------------ SETUP ------------------
 project_root = os.path.abspath(os.path.join(os.path.dirname(__file__), '..', '..', 'src'))
 sys.path.append(project_root)
@@ -18,6 +20,8 @@ logger.info("Starting Pipeline Orchestrator")
 #FIX: Check and deactivate virtual environment properly
 logger.info("Deactivating existing virtual environment...")
 subprocess.run("deactivate", shell=True, check=False)
+
+project_root = os.path.abspath(os.path.join(os.path.dirname(__file__), '..', '..'))
 
 # Generic function for subprocess execution
 def run_script(script_path):
@@ -62,8 +66,24 @@ def merger_task():
 # Task 6: Data Preparation from both the sources
 @task(retries=2)
 def data_prep_task():
+    return run_script(os.path.join(project_root, "src", "components", "data_preparation.py"))
 
-    data_prep_script_path = os.path.join(project_root, "src", "components", "data_preparation.py")
+@task(retries=2)
+def feature_store_task():
+    return run_script(os.path.join(project_root, "src", "components", "feature_store", "features.py"))
+
+@task(retries=2)
+def feast_task():
+    return run_script(os.path.join(project_root, "src", "components", "feature_store", "execute_feast.py"))
+
+@task(retries=2)
+def feature_retrieval_task():
+    return run_script(os.path.join(project_root, "src", "components", "feature_store", "feature_retrival.py"))
+
+@task(retries=2)
+def mlflow_task():
+    return run_script(os.path.join(project_root, "src", "components", "Models_MLflow.py"))
+
 
 # Define the Flow (DAG)
 @flow
@@ -74,6 +94,10 @@ def data_pipeline():
     validation_ge_status = validation_ge_task(wait_for=[validation_manual_task_status])
     merger_task_status = merger_task(wait_for=[validation_ge_status])
     data_prep_status = data_prep_task(wait_for=[merger_task_status])
+    feature_store_status = feature_store_task(wait_for=[data_prep_status])
+    feast_status = feast_task(wait_for=[feature_store_status])
+    feature_retrieval_status = feature_retrieval_task(wait_for=[feast_status])
+    mlflow_status = mlflow_task(wait_for=[feature_retrieval_status])
 
     logger.info("Pipeline completed successfully.")
 

@@ -51,9 +51,7 @@ docx==0.2.4
 entrypoints==0.4
 exceptiongroup==1.2.2
 executing==2.2.0
-fastapi==0.115.11
 fastjsonschema==2.21.1
-feast==0.15.0 #0.47.0
 fonttools==4.56.0
 fqdn==1.5.1
 frozenlist==1.5.0
@@ -141,7 +139,6 @@ pg8000==1.31.2
 pillow==11.1.0
 platformdirs==4.3.6
 posthog==3.19.1
-prefect==3.2.12
 prometheus_client==0.21.1
 prompt_toolkit==3.0.50
 propcache==0.3.0
@@ -151,10 +148,7 @@ psycopg2==2.9.10
 pure_eval==0.2.3
 pyarrow==18.0.0
 pycparser==2.22
-pydantic==1.10.21
-pydantic-extra-types==2.10.3
-pydantic-settings==2.8.1
-pydantic_core==2.27.2
+pydantic
 Pygments==2.19.1
 PyJWT==2.10.1
 pyparsing==3.2.1
@@ -165,8 +159,6 @@ python-json-logger==3.3.0
 python-slugify==8.0.4
 python-socks==2.7.1
 pytz==2025.1
-pywin32==309
-pywinpty==2.0.15
 PyYAML==6.0.2
 pyzmq==26.3.0
 readchar==4.2.1

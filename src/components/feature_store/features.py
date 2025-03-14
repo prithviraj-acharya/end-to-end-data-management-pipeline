@@ -1,3 +1,7 @@
+import subprocess
+import sys
+subprocess.run([sys.executable, "-m", "pip", "install", "-r", "requirements_without_GE.txt"])
+
 import os
 import pandas as pd
 from datetime import datetime, timedelta
@@ -6,7 +10,7 @@ from feast import Entity, FeatureView, Field, FeatureService
 from feast.types import Float32, Int32, String, UnixTimestamp
 from feast.value_type import ValueType
 from feast import RedshiftSource
-import sys
+
 
 # ------------------ SETUP ------------------
 project_root = os.path.abspath(os.path.join(os.path.dirname(__file__), '..', '..', '..', 'src'))
@@ -75,7 +79,6 @@ try:
             Field(name="monthlycharges", dtype=Float32),
             Field(name="churn", dtype=String),
             Field(name="customerid", dtype=String),
-            #Field(name="created_timestamp", dtype=UnixTimestamp),
             Field(name="event_timestamp", dtype=UnixTimestamp)
         ],
         source=source,
