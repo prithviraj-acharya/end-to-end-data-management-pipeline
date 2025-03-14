@@ -1,2 +1,2 @@
 ['remote "myremote"']
-    url = ../dmml-assign1-gauravp/local_data
+    url = s3://dmml-assign1-gauravp/local_data
