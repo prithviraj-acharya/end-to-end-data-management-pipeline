@@ -1,0 +1,15 @@
+artifact_uri: file:///Users/lizapersonal/PycharmProjects/data-management-pipeline/mlflow_runs/475178814792087182/12e34f31ab8c4b0d94188c0d719cabc3/artifacts
+end_time: 1741955981459
+entry_point_name: ''
+experiment_id: '475178814792087182'
+lifecycle_stage: active
+run_id: 12e34f31ab8c4b0d94188c0d719cabc3
+run_name: LogisticRegression
+run_uuid: 12e34f31ab8c4b0d94188c0d719cabc3
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1741955975019
+status: 3
+tags: []
+user_id: lizapersonal

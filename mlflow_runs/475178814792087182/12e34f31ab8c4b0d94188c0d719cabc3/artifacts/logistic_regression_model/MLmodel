@@ -1,0 +1,59 @@
+artifact_path: logistic_regression_model
+flavors:
+  python_function:
+    env:
+      conda: conda.yaml
+      virtualenv: python_env.yaml
+    loader_module: mlflow.sklearn
+    model_path: model.pkl
+    predict_fn: predict
+    python_version: 3.12.8
+  sklearn:
+    code: null
+    pickled_model: model.pkl
+    serialization_format: cloudpickle
+    sklearn_version: 1.6.1
+is_signature_from_type_hint: false
+mlflow_version: 2.20.3
+model_size_bytes: 4336
+model_uuid: 284d9194e0824d3880152c8ca8bb30ab
+run_id: 12e34f31ab8c4b0d94188c0d719cabc3
+saved_input_example_info:
+  artifact_path: input_example.json
+  serving_input_path: serving_input_example.json
+  type: json_object
+signature:
+  inputs: '[{"type": "boolean", "name": "paymentmethod_mailed_check", "required":
+    true}, {"type": "boolean", "name": "paymentmethod_electronic_check", "required":
+    true}, {"type": "boolean", "name": "paymentmethod_credit_card_automatic", "required":
+    true}, {"type": "boolean", "name": "paperlessbilling_yes", "required": true},
+    {"type": "boolean", "name": "contract_two_year", "required": true}, {"type": "boolean",
+    "name": "contract_one_year", "required": true}, {"type": "boolean", "name": "streamingmovies_yes",
+    "required": true}, {"type": "boolean", "name": "streamingmovies_no_internet_service",
+    "required": true}, {"type": "boolean", "name": "streamingtv_yes", "required":
+    true}, {"type": "boolean", "name": "streamingtv_no_internet_service", "required":
+    true}, {"type": "boolean", "name": "techsupport_yes", "required": true}, {"type":
+    "boolean", "name": "techsupport_no_internet_service", "required": true}, {"type":
+    "boolean", "name": "deviceprotection_yes", "required": true}, {"type": "boolean",
+    "name": "deviceprotection_no_internet_service", "required": true}, {"type": "boolean",
+    "name": "onlinebackup_yes", "required": true}, {"type": "boolean", "name": "onlinebackup_no_internet_service",
+    "required": true}, {"type": "boolean", "name": "onlinesecurity_yes", "required":
+    true}, {"type": "boolean", "name": "onlinesecurity_no_internet_service", "required":
+    true}, {"type": "boolean", "name": "internetservice_no", "required": true}, {"type":
+    "boolean", "name": "internetservice_fiber_optic", "required": true}, {"type":
+    "boolean", "name": "multiplelines_yes", "required": true}, {"type": "boolean",
+    "name": "multiplelines_no_phone_service", "required": true}, {"type": "boolean",
+    "name": "phoneservice_yes", "required": true}, {"type": "boolean", "name": "dependents_yes",
+    "required": true}, {"type": "boolean", "name": "partner_yes", "required": true},
+    {"type": "boolean", "name": "seniorcitizen_yes", "required": true}, {"type": "boolean",
+    "name": "gender_male", "required": true}, {"type": "double", "name": "family_label",
+    "required": true}, {"type": "double", "name": "partner_label", "required": true},
+    {"type": "double", "name": "dependents_label", "required": true}, {"type": "double",
+    "name": "total_services", "required": true}, {"type": "double", "name": "tenure",
+    "required": true}, {"type": "double", "name": "monthly_total_ratio", "required":
+    true}, {"type": "double", "name": "totalcharges", "required": true}, {"type":
+    "double", "name": "monthlycharges", "required": true}]'
+  outputs: '[{"type": "long", "required": true}]'
+  params: null
+type_hint_from_example: false
+utc_time_created: '2025-03-14 12:39:38.423701'
