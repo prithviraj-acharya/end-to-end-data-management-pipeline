@@ -1,0 +1,14 @@
+aliases: []
+creation_timestamp: 1741970534085
+current_stage: None
+description: null
+last_updated_timestamp: 1741970534085
+name: Churn_RFModel
+run_id: a5d5fb780e404bcab9aa8643b44b8297
+run_link: null
+source: file:///Users/lizapersonal/PycharmProjects/data-management-pipeline/mlflow_runs/475178814792087182/a5d5fb780e404bcab9aa8643b44b8297/artifacts/random_forest_model
+status: READY
+status_message: null
+storage_location: file:///Users/lizapersonal/PycharmProjects/data-management-pipeline/mlflow_runs/475178814792087182/a5d5fb780e404bcab9aa8643b44b8297/artifacts/random_forest_model
+user_id: null
+version: 8

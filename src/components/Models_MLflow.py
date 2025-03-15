@@ -219,4 +219,4 @@ logger.info(f"Random Forest -> Accuracy: {rf_accuracy:.4f}, "
       f"Precision: {rf_precision:.4f}, Recall: {rf_recall:.4f}, F1 Score: {rf_f1:.4f}")
 
 
-# subprocess.Popen(["mlflow", "ui", "--backend-store-uri", "file:///Users/lizapersonal/PycharmProjects/data-management-pipeline/mlflow_run"])
+# subprocess.Popen(["mlflow", "ui", "--backend-store-uri", "/Users/lizapersonal/PycharmProjects/data-management-pipeline/mlflow_runs"])

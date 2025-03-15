@@ -1,0 +1,15 @@
+artifact_uri: file:///Users/lizapersonal/PycharmProjects/data-management-pipeline/mlflow_runs/475178814792087182/598f849a9ab34e3697c0263ed069b2df/artifacts
+end_time: 1741975094493
+entry_point_name: ''
+experiment_id: '475178814792087182'
+lifecycle_stage: active
+run_id: 598f849a9ab34e3697c0263ed069b2df
+run_name: RandomForest
+run_uuid: 598f849a9ab34e3697c0263ed069b2df
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1741975091471
+status: 3
+tags: []
+user_id: lizapersonal
